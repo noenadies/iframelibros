@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head>  <link rel="stylesheet" href="micss.css">
 		<meta charset=utf-8>
 		<title>My first three.js app</title>
 		<style>
@@ -36,27 +36,180 @@ z-index: 2;
 	z-index: 1;
 
 }
-		</style>
+
+#idtodo{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+#idclumnaizq{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 19%;
+	height: 100%;
+	z-index: 2;
+background-color: black;
+
+}
+
+#idclumnader{
+	position: absolute;
+	top: 0%;
+	left: 81%;
+	width: 19%;
+	height: 100%;
+	z-index: 2;
+background-color: black;
+
+}
+
+#idclumnaabajo{
+
+	position: absolute;
+	top: 81%;
+	left: 20%;
+	width: 60%;
+	height: 19%;
+	z-index: 1;
+
+	background-color: rgb(95, 0, 0);
+}
+
+
+.imgclizq{
+
+
+position: relative;
+top: 0%;
+left: 0%;
+width:95%;
+height: 100%;
+
+}
+		</style><script src="jquery-3.2.1.min.js"></script>
 	</head>
 	<body>
 		
+	<div id="idtodo">
+
+
+		<div id="idclumnaizq">
+
+		
+			
+			<table style="width: 100%" border="1">
+				<tbody>
+				  <tr>
+					<td><img id="id0" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+					<td><img id="id1" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+				  </tr>
+				  <tr>
+					<td><img id="id2" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+					<td><img id="id3" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+				  </tr>
+				  <tr>
+					<td><img id="id4" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+					<td><img id="id5" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+				  </tr>
+				  <tr>
+					<td><img id="id6" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+					<td><img id="id7" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+					</td>
+				  </tr>
+
+				</tbody>
+			  </table>
+
+
+
+
+
+		</div>
+
+
+		<div id="idclumnader"></div>
+
+
+
+
+
+		<div id="idclumnaabajo"></div>
+
+
+
+		<div id="iddiviframeyams">
+			<div id="iddivoculta"></div>
+		
 	
-<div id="iddiviframeyams">
-	<div id="iddivoculta"></div>
+		
+		
+		</div>
 
 
-	<iframe id="idembed"  src="https://drive.google.com/file/d/1720rPtRk9h558WwqJsjD5amARB_s9B9F/preview?authuser=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
 
-
-
-
-</div>
-
+	
 
 
 
 
 
+<script>
+
+var arraybagota=[];
+
+$.ajax({
+               
+			   url:   'jsonbogota.json',
+				dataType:  'json',
+			   type:  'get',
+			   cache:false,
+			   success:  function (data) {
+				
+					  for(var i in data){
+
+				
+
+					arraybagota.push({id:data[i].id,idname:data[i].idname,pagina:data[i].pg,img:data[i].img});
+
+					  }
+					  
+					 
+					  console.log(arraybagota); 
+					  console.log(arraybagota.length); 
+
+					  var elementosimg = document.getElementsByClassName("imgclizq");
+					  elementosimg[0].src = "https://static.pelisplus.co/movie/cover/original/8fab339f25a0d94e30d6db3840f8849a.jpg";
+		 
+setTimeout(function(){
+	elementosimg[0].src = "https://static.pelisplus.co/movie/cover/original/24e5ff780e0e1774bf0d6e6f67cc8f58.jpg";
+		 
+},4000);
+
+			   }
+	   });
+
+
+
+
+
+
+
+
+
+</script>
 
 
 
