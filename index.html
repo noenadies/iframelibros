@@ -675,8 +675,9 @@ vermenuserieselitemporadas();
 
 var tempestevideocajas="";
 function oncliseriestemp(thiss){
+	removerelementoshijos("idacaaddserieselijetempvideo");
 
-alert("aca "+ thiss.id);
+
 vermenuserieselitemporadasvideos();
 tempestevideocajas=thiss.id;
 console.log(vtempseletemp+"  " + tempestevideocajas);
@@ -743,6 +744,7 @@ var cue=0;
 var vvideoserie=1;
 var strindelosvideos="";
 var  arrayseries2019=[];
+var tempnodeseries;
 function traejsonseries2019(){
 
 $.ajax({
@@ -765,8 +767,10 @@ for(var iii in arrayseries2019[i][ii]){
 	//	console.log("nm  "+ arrayseries2019[i].idname);
 
 		crealoscuadroseries(arrayseries2019[i].idname);
-	}
 		
+	}
+
+	//removerelementoshijos(removerelementoshijos("idacaaddseries");
 		   }
    });
 
@@ -917,6 +921,7 @@ vertitulomenuserieselijetemp();
 
 function vermenuserieselitemporadasvideos(){
 	
+
 	ocultardiv("idmenunavegar");
 	ocultardiv("iddiviframeyamspeliculas");
 			
@@ -947,6 +952,27 @@ function vermenuhome(){
 	ocultardiv("idmenupeliculas");
 			
 }
+
+
+var listelemremo;
+function removerelementoshijos(idele) {/*
+console.log("idele  "+ idele);
+   listelemremo = document.getElementById(idele);
+   if(listelemremo.childNodes){for(var i in listelemremo.childNodes ){
+	listelemremo.removeChild(listelemremo.childNodes[0]);
+	console.log(listelemremo.childNodes.length);   }
+
+}
+   
+*/  //  $("#"+idele).remove();
+$("#"+idele).empty();
+
+}
+
+
+
+
+
 
 </script>
 
