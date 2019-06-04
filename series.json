@@ -2,11 +2,13 @@
   "juegotronos" : {
     "id":"id0",
     "idname":"juegotronos",
+    "title":"Juego de  Tronos",
+    "pg":"https://lh4.googleusercontent.com/AiAruLmfhznOjrSomn5lEbgYOvsL5ggDrM7WvV6IMjuH8n4govOq1h_W1VwibKzyuwpG7-cIcKTM234a39E4s_dkcVejE9X8OPiyX4plHZQLuyntpNk=w271",
     "t1" : {
 
       "id":"id0",
       "idname":"t1",
-
+      "title":"Temporada 1",
       "v1" : {
         "id" : "id0",
         "idname" : "v1",
@@ -59,6 +61,7 @@
     "t2" : {
       "id":"id1",
       "idname":"t2",
+      "title":"Temporada 2",
       "v1" : {
         "id" : "id0",
         "idname" : "v1",
@@ -109,57 +112,61 @@
       }
     }
   },
-  "strengerthins" : {
-    "id":"id1",
-    "idname":"strengerthins",
-    "t1" :{
+  "strangerthings" : {
+    "id":"id0",
+    "idname":"strangerthings",
+    "title":"Stranger Things",
+    "pg":"https://lh3.googleusercontent.com/OmxLETtsX4oLNCZIxxup24BW9z3oneP_3KXLjF2RIcbfCO9T6w-ngSFhW_LBe2LaDbsFEZXiO2HYmnHpkZvJrmqBeYw7uIz6ZSwpK81zkmaENo4JZtY=w271",
+    "t1" : {
+
       "id":"id0",
       "idname":"t1",
+      "title":"Temporada 1",
       "v1" : {
         "id" : "id0",
-        "idname" : "t1",
+        "idname" : "v1",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v2" : {
         "id" : "id1",
-        "idname" : "v1",
+        "idname" : "v2",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v3" : {
         "id" : "id2",
-        "idname" : "v1",
+        "idname" : "v3",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v4" : {
         "id" : "id3",
-        "idname" : "v1",
+        "idname" : "v4",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v5" : {
         "id" : "id4",
-        "idname" : "v1",
+        "idname" : "v5",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v6" : {
         "id" : "id5",
-        "idname" : "v1",
+        "idname" : "v6",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v7" : {
         "id" : "id6",
-        "idname" : "v1",
+        "idname" : "v7",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v8" : {
         "id" : "id7",
-        "idname" : "v1",
+        "idname" : "v8",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       }
@@ -167,6 +174,7 @@
     "t2" : {
       "id":"id1",
       "idname":"t2",
+      "title":"Temporada 2",
       "v1" : {
         "id" : "id0",
         "idname" : "v1",
@@ -175,43 +183,43 @@
       },
       "v2" : {
         "id" : "id1",
-        "idname" : "v1",
+        "idname" : "v2",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v3" : {
         "id" : "id2",
-        "idname" : "v1",
+        "idname" : "v3",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v4" : {
         "id" : "id3",
-        "idname" : "v1",
+        "idname" : "v4",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v5" : {
         "id" : "id4",
-        "idname" : "v1",
+        "idname" : "v5",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v6" : {
         "id" : "id5",
-        "idname" : "v1",
+        "idname" : "v6",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v7" : {
         "id" : "id6",
-        "idname" : "v1",
+        "idname" : "v7",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       },
       "v8" : {
         "id" : "id7",
-        "idname" : "v1",
+        "idname" : "v8",
         "img" : "https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/55576319_1151702351657226_622841975283908608_n.jpg?_nc_cat=103&_nc_eui2=AeE3fs-5j5rCCqsfA_0FlGApURCleK_lcqLFUkZ7ESdBCjgrLuLtNPdXs73nZdhwgp6hqIg7vrOHg4Js0XC_AFtThFGuvOUIq1qOgvuIJmvKrQ&_nc_ht=scontent.fbog2-2.fna&oh=4532f0f7b2c92b82bdcd39103c69f119&oe=5D8B2115",
         "pg" : "https://drive.google.com/file/d/1-Qw3eJsyNMmQWspwmzA2j7VyrO8_zIdY/preview?authuser=0"
       }
