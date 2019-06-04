@@ -196,8 +196,74 @@ z-index: 10;
         z-index: 1;
       }
 
+#idbtmenu{
+
+position: absolute;
+top: 100%;
+left: 40%;
+align-content: center;
+width: 20%;
+height: 30px;
+}
+
+
+
+
+#idmenunavegar{
+
+position: absolute;
+top: 0%;
+left: 0%;
+width: 100%;
+height: 100%;
+z-index: 20;
+background-color: black
+}
+
+
+
+#idmenuseries{
+
+	position: absolute;
+	top: 0%;
+	left: 20%;
+	width: 60%;
+	height: 80%;
+	z-index: 1;
+background-color: rgb(126, 43, 108);
+overflow: scroll;
+z-index: 3;
+}
+
+
+#idmenuserieselijetemp{
+	position: absolute;
+	top: 0%;
+	left: 20%;
+	width: 60%;
+	height: 80%;
+	z-index: 1;
+background-color: rgb(29, 185, 107);
+overflow: scroll;
+z-index: 3;	
+}
+
+
+#idmenuserieselijetempvideo{
+	position: absolute;
+	top: 0%;
+	left: 20%;
+	width: 60%;
+	height: 80%;
+	z-index: 1;
+background-color: rgb(196, 115, 22);
+overflow: scroll;
+z-index: 3;	
+
+}
 
 </style>
+
   <script src="jquery-3.2.1.min.js" ></script>
 </head>
 
@@ -205,6 +271,78 @@ z-index: 10;
 <body onload="iniciatodotodo();">
 
 <div id="idtodo">
+
+
+
+
+<div id="idmenunavegar">
+
+		<div class="py-5" >
+				<div class="container">
+				  <div class="row">
+					<div id="ideligerevistas" onclick="fonclielige(this);" class="col-md-3">
+					  <div class="card">
+						<div class="card-body">
+						  <h5 class="card-title">REVISTAS</h5>
+						  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						</div>
+						<img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
+					  </div>
+					</div>
+					<div id="ideligeseries" onclick="fonclielige(this);" class="col-md-3">
+							<div class="card">
+							  <div class="card-body">
+								<h5 class="card-title">SERIES</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							  </div>
+							  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
+							</div>
+						  </div>	<div id="ideligepeliculas" onclick="fonclielige(this);"  class="col-md-3">
+								<div class="card">
+								  <div class="card-body">
+									<h5 class="card-title">PELICULAS</h5>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								  </div>
+								  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
+								</div>
+							  </div>	<div id="ideligelibros" onclick="fonclielige(this);" class="col-md-3">
+									<div class="card">
+									  <div class="card-body">
+										<h5 class="card-title">LIBROS</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+									  </div>
+									  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
+									</div>
+								  </div>	<div id="ideligecursos" onclick="fonclielige(this);" class="col-md-3">
+										<div class="card">
+										  <div class="card-body">
+											<h5 class="card-title">CURSOS</h5>
+											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+											<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+										  </div>
+										  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
+										</div>
+									  </div>
+				  </div>
+				</div>
+			  </div>
+	
+
+
+
+
+</div>
+
+
+
+
+
+
+
 
 
         <div id="idcuerpotitulopeliculas">dddddddddddddddddddd</div>
@@ -241,11 +379,79 @@ z-index: 10;
                 <iframe id="idpeliculasvisor" class="idiframemivideo"
                 src="https://drive.google.com/file/d/11Pv1lwaODCjRYlBpG1MlXpEZEmFjLXlH/preview?authuser=0"
                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        </div>
+							
+				<button onclick="fonclihome();" id="idbtmenu">MENU o home</button>
+				
+				</div>
             
-            
-            
+			
+				
 
+				<div id="idmenuseries">
+
+              
+						<div id="idcuerpobodyseries">
+							
+						
+										<div class="py-5" >
+												<div class="container">
+												  <div id="idacaaddseries" class="row">
+												   
+						
+												  
+												  </div>
+												</div>
+											  </div>
+								
+											</div>
+								
+								</div>
+
+
+
+
+								<div id="idmenuserieselijetemp">
+
+              
+										<div id="idcuerpobodyserieselijetemp">
+											
+										
+														<div class="py-5" >
+																<div class="container">
+																  <div id="idacaaddserieselijetemp" class="row">
+																   
+										
+																  
+																  </div>
+																</div>
+															  </div>
+												
+															</div>
+												
+												</div>					
+
+
+
+            
+												<div id="idmenuserieselijetempvideo">
+
+              
+														<div id="idcuerpobodyserieselijetempvideo">
+															
+														
+																		<div class="py-5" >
+																				<div class="container">
+																				  <div id="idacaaddserieselijetempvideo" class="row">
+																				   
+														
+																				  
+																				  </div>
+																				</div>
+																			  </div>
+																
+																			</div>
+																
+																</div>
 
 
 
@@ -367,21 +573,42 @@ z-index: 10;
 
 function iniciatodotodo(){
     traejsonpeliculas2019();
-    funcioninciionload();
+	funcioninciionload();
+	
+	oculttitulomenuserieselijetemp();
+
 }
 
 function crealoscuadorpelis(stid){
 
-    
-  //  for(var i =0 ; i<10;i=i+1){
 
 $("#idacaadd").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>capitan america yo </p><img class='imgp' src='https://static.pelisplus.co/movie/cover/original/ac09a050f6c9861759cd11b64a30e5f9.jpg' alt='Card image cap'></div></div></div></div>");
 
-
-
-
-//}
 }
+
+function crealoscuadroseries(stid){
+
+
+$("#idacaaddseries").append("<div onclick="+"oncliseries(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>capitan america yo </p><img class='imgp' src='https://static.pelisplus.co/movie/cover/original/ac09a050f6c9861759cd11b64a30e5f9.jpg' alt='Card image cap'></div></div></div></div>");
+
+}
+
+function crealoscuadroseriesytemp(stid){
+
+
+$("#idacaaddserieselijetemp").append("<div onclick="+"oncliseriestemp(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>capitan america yo </p><img class='imgp' src='https://static.pelisplus.co/movie/cover/original/ac09a050f6c9861759cd11b64a30e5f9.jpg' alt='Card image cap'></div></div></div></div>");
+
+}
+
+function crealoscuadroseriesytempvideos(stid){
+
+
+$("#idacaaddserieselijetempvideo").append("<div onclick="+"oncliseriestempvideo(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>capitan america yo </p><img class='imgp' src='https://static.pelisplus.co/movie/cover/original/ac09a050f6c9861759cd11b64a30e5f9.jpg' alt='Card image cap'></div></div></div></div>");
+
+}
+
+
+
 var cu=0;
 function onclipeliculas(thiss){
 
@@ -401,7 +628,79 @@ cu=cu+1;
    
 }
 
+function oncliseriesvideoeste(thissvideo){
 
+
+
+      pasarleeliframepeliculas(thissvideo)
+    mostrardiv("iddiviframeyamspeliculas");
+
+
+
+
+   
+}
+
+
+
+
+
+
+
+var vseltempidx=0;
+var vtempseletemp="0";
+function oncliseries(thiss){
+
+
+alert(thiss.id);
+	vtempseletemp=thiss.id;
+
+
+vermenuserieselitemporadas();
+
+
+
+	//	console.log("nm  "+ arrayseries2019[i].idname);
+	for(var ii in arrayseries2019[vtempseletemp]){
+	//	crealoscuadroseriesytemp(arrayseries2019[i][ii]);
+
+
+	if(arrayseries2019[vtempseletemp][ii].idname){
+	//	console.log("nm  "+ arrayseries2019[vtempseletemp][ii].idname);
+		crealoscuadroseriesytemp(arrayseries2019[vtempseletemp][ii].idname);
+	}
+
+	
+	}	}
+
+var tempestevideocajas="";
+function oncliseriestemp(thiss){
+
+alert("aca "+ thiss.id);
+vermenuserieselitemporadasvideos();
+tempestevideocajas=thiss.id;
+console.log(vtempseletemp+"  " + tempestevideocajas);
+for(var i in arrayseries2019[vtempseletemp][tempestevideocajas]){
+	//console.log( arrayseries2019[vtempseletemp][tempestevideocajas][i].idname);
+
+if(arrayseries2019[vtempseletemp][tempestevideocajas][i].idname){
+	console.log( "si  " +arrayseries2019[vtempseletemp][tempestevideocajas][i].idname);
+	crealoscuadroseriesytempvideos(arrayseries2019[vtempseletemp][tempestevideocajas][i].pg);
+
+}	}
+
+
+
+}
+
+function oncliseriestempvideo(thiss){
+
+//alert("aca video "+ thiss.id);
+
+
+oncliseriesvideoeste(thiss.id)
+
+}
 
 
 
@@ -421,11 +720,12 @@ function traejsonpeliculas2019(){
                 for(var i in data){
                     arraypeliculas2019.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pagina:data[i].pg})
                
-                    crealoscuadorpelis(data[i].idname)
+					crealoscuadorpelis(data[i].idname);
+				
                
                 }
             
-
+				traejsonseries2019();
 
              //   console.log("arraypeliculas2019");
           // console.log(arraypeliculas2019);
@@ -438,6 +738,50 @@ function traejsonpeliculas2019(){
 
 
 }
+
+var cue=0;
+var vvideoserie=1;
+var strindelosvideos="";
+var  arrayseries2019=[];
+function traejsonseries2019(){
+
+$.ajax({
+		   
+		   url:   'series.json',
+			dataType:  'json',
+		   type:  'get',
+		   cache:false,
+		   success:  function (data) {
+			arrayseries2019=data;
+	/*	for(var i in arrayseries2019){
+for(var ii in arrayseries2019[i]){	
+for(var iii in arrayseries2019[i][ii]){
+	console.log(arrayseries2019[i][ii][iii].id);
+}
+}
+	}*/ 
+		
+	for(var i in arrayseries2019){
+	//	console.log("nm  "+ arrayseries2019[i].idname);
+
+		crealoscuadroseries(arrayseries2019[i].idname);
+	}
+		
+		   }
+   });
+
+
+
+
+
+
+}
+
+
+
+
+
+
 
 
 function ocultardiv(st){ document.getElementById(st).style.display="none";
@@ -458,8 +802,48 @@ function oculttitulomenupeliculas(){
     ocultardiv("idmenupeliculas");
 
 }
+function verttitulomenupeliculas(){
+    mostrardiv("idcuerpotitulopeliculas");
+    mostrardiv("idmenupeliculas");
 
+}
+
+
+function oculttitulomenuseries(){
+//	ocultardiv("idcuerpotitulopeliculas");
+	ocultardiv("idmenuseries");
+
+}
+function vertitulomenuseries(){
+	//mostrardiv("idcuerpotitulopeliculas");
+				mostrardiv("idmenuseries");
+
+}
        
+function vertitulomenuserieselijetemp(){
+	//mostrardiv("idcuerpotitulopeliculas");
+				mostrardiv("idmenuserieselijetemp");
+
+}
+function oculttitulomenuserieselijetemp(){
+//	ocultardiv("idcuerpotitulopeliculas");
+	ocultardiv("idmenuserieselijetemp");
+
+}
+
+
+function vertitulomenuserieselijetempvideo(){
+	//mostrardiv("idcuerpotitulopeliculas");
+				mostrardiv("idmenuserieselijetempvideo");
+
+}
+function oculttitulomenuserieselijetempvideo(){
+//	ocultardiv("idcuerpotitulopeliculas");
+	ocultardiv("idmenuserieselijetempvideo");
+
+}
+
+
 
 function funcioninciionload(){
     ocultardiv("iddiviframeyamspeliculas");
@@ -467,10 +851,102 @@ function funcioninciionload(){
 
 
 
+function fonclielige(thiss){
+
+	if(thiss.id=="ideligepeliculas"){
+		vermenupeliculas();
+
+	}
+
+	if(thiss.id=="ideligeseries"){
+		vermenuseries();
+
+	}
+
+
+}
+
+function vermenupeliculas(){
+
+	ocultardiv("idmenunavegar");
+	ocultardiv("iddiviframeyamspeliculas");
+	oculttitulomenuseries();	
+	oculttitulomenuseries();
+
+oculttitulomenuserieselijetemp();
+oculttitulomenuserieselijetempvideo();
+
+	verttitulomenupeliculas();
+			
+}
+
+function vermenuseries(){
+	
+	ocultardiv("idmenunavegar");
+	ocultardiv("iddiviframeyamspeliculas");
+			
+	oculttitulomenupeliculas();		
+oculttitulomenuserieselijetemp();
+oculttitulomenuseries();
+
+oculttitulomenuserieselijetemp();
+oculttitulomenuserieselijetempvideo();
+vertitulomenuseries();
+			
+}
+
+
+function vermenuserieselitemporadas(){
+	
+	ocultardiv("idmenunavegar");
+	ocultardiv("iddiviframeyamspeliculas");
+			
+	oculttitulomenupeliculas();		
+oculttitulomenuseries();
+
+oculttitulomenuseries();
+
+oculttitulomenuserieselijetemp();
+oculttitulomenuserieselijetempvideo();
+
+vertitulomenuserieselijetemp();
+			
+}
+
+
+
+function vermenuserieselitemporadasvideos(){
+	
+	ocultardiv("idmenunavegar");
+	ocultardiv("iddiviframeyamspeliculas");
+			
+	oculttitulomenupeliculas();		
+oculttitulomenuseries();
+
+oculttitulomenuserieselijetemp();
+
+vertitulomenuserieselijetempvideo();
+
+
+			
+}
 
 
 
 
+
+function fonclihome(){
+	vermenuhome();
+}
+function vermenuhome(){
+	mostrardiv("idmenunavegar");
+
+	ocultardiv("iddiviframeyamspeliculas");
+			
+	ocultardiv("idcuerpotitulopeliculas");
+	ocultardiv("idmenupeliculas");
+			
+}
 
 </script>
 
