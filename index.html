@@ -125,6 +125,16 @@ height: 120px;
 background-color: rgb(0, 0, 0);
 overflow: scroll;
 z-index: 3;
+
+
+-webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+
+
+
+
+
+
 }
 
 
@@ -233,6 +243,16 @@ background-color: black
 background-color: rgb(0, 0, 0);
 overflow: scroll;
 z-index: 3;
+
+
+-webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+
+
+
+
+
+
 }
 
 
@@ -260,6 +280,10 @@ background-color: rgb(0, 0, 0);
 overflow: scroll;
 z-index: 3;	
 
+
+
+
+
 }
 
 
@@ -268,16 +292,69 @@ z-index: 3;
 
 	position: absolute;
 	top: 1%;
-	left: 75%;
+	left: 43%;
 	width: 60px;
 	height: 33px;
 	z-index: 50;
-background-color: rgb(187, 19, 19);
 
 
+	border: 0px hidden #1C6EA4;
+}
+
+#idbtpelicjetemp{
+	position: absolute;
+	top: 1%;
+	left: 43%;
+	width: 60px;
+	height: 33px;
+	z-index: 50;
+
+
+	border: 0px hidden #1C6EA4;
 }
 
 
+.clbtcontrol{
+
+	-moz-box-shadow: 3px 4px 0px 0px #1564ad;
+	-webkit-box-shadow: 3px 4px 0px 0px #1564ad;
+	box-shadow: 3px 4px 0px 0px #1564ad;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#79bbff;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+height: 33px;
+text-align: center;
+width: 70px;
+padding: 0px;
+	font-size: 11px;
+	border: 0px hidden #1C6EA4;
+}
+
+.cltablas{
+	-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+border: 5px hidden #1C6EA4;
+border: 0px hidden #1C6EA4;
+}
 
 
 </style>
@@ -294,18 +371,18 @@ background-color: rgb(187, 19, 19);
 
 	<div id="idbtserieselijetemp">
 
-		<table style="width: 100%" border="1">
+		<table class="cltablas" style="width: 100%" border="1">
 			<tbody>
 				<tr>
-					<td><button onclick="atrasserietemp();" class="btcontrol">Tp</button>
+					<td><button class="clbtcontrol" onclick="atrasserietemp();" class="btcontrol">Temorada</button>
 					</td>
-					<td><button onclick="atrasserie();" class="btcontrol">SR</button>
+					<td><button class="clbtcontrol" onclick="atrasserie();" class="btcontrol">Series</button>
 					</td>
 				</tr>
 				<tr>
-					<td><button onclick="fonclihome();" class="btcontrol">HM</button>
+					<td><button class="clbtcontrol" onclick="fonclihome();" class="btcontrol">Home</button>
 					</td>
-					<td><button class="btcontrol">ok4</button>
+					<td><button class="clbtcontrol" class="btcontrol">ok4</button>
 					</td>
 				</tr>
 			</tbody>
@@ -313,6 +390,25 @@ background-color: rgb(187, 19, 19);
 	
 	
 	</div>
+
+
+	<div class="cltablas" id="idbtpelicjetemp">
+
+		<table style="width: 100%" border="1">
+			<tbody>
+				<tr>
+					<td><button class="clbtcontrol" onclick="atraspelis();" class="btcontrol">Peliculas</button>
+					</td>
+					<td><button class="clbtcontrol" onclick="fonclihome();" class="btcontrol">Home</button>
+					</td>
+				</tr>
+		
+			</tbody>
+		</table>
+	
+	
+	</div>
+
 
 
 
@@ -665,10 +761,10 @@ var vtempstidcseries="";var vtempsttitlecseries="";var vtempsturlimgcseries="";
 var vtempstidcseriestemparada="";var vtempsttitlecseriestemparad="";var vtempsturlimgcseriestemparad="";
 
 
-function crealoscuadorpelis(stid){
+function crealoscuadorpelis(stid,sttitle,sturlimg){
 
 
-$("#idacaadd").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>capitan america yo </p><img class='imgp' src='https://static.pelisplus.co/movie/cover/original/ac09a050f6c9861759cd11b64a30e5f9.jpg' alt='Card image cap'></div></div></div></div>");
+$("#idacaadd").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>"+String(sttitle) +"</p><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div></div></div>");
 
 }
 
@@ -694,11 +790,14 @@ $("#idacaaddserieselijetempvideo").append("<div onclick="+"oncliseriestempvideo(
 }
 
 
-
+var vtemppelictemp="";
 var cu=0;
 function onclipeliculas(thiss){
 
-;
+	removerelementoshijos("idacaadd");
+
+
+vtemppelictemp=thiss.id;
 for(var i in arraypeliculas2019 ){
     if(arraypeliculas2019[i].idname==thiss.id){
       pasarleeliframepeliculas(arraypeliculas2019[i].pagina)
@@ -740,7 +839,7 @@ var vtempidnamedeseries="";
 function oncliseries(thiss){
 	removerelementoshijos("idacaaddserieselijetemp");
 
-alert(thiss.id);
+
 	vtempseletemp=thiss.id;
 	vtempidnamedeseries=thiss.id;
 
@@ -807,25 +906,34 @@ function traejsonpeliculas2019(){
 
     $.ajax({
                
-               url:   'jsonbogota.json',
+               url:   'peliculas2019.json',
                 dataType:  'json',
                type:  'get',
                cache:false,
                success:  function (data) {
            
-              
+              console.log(data);
                 for(var i in data){
-                    arraypeliculas2019.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pagina:data[i].pg})
+               arraypeliculas2019.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pagina:data[i].pg,title:data[i].title})
                
-					crealoscuadorpelis(data[i].idname);
+
 				
                
                 }
+						//		console.log(arraypeliculas2019[i].title);
+
+								for(var i in arraypeliculas2019){
+		
+									console.log(arraypeliculas2019[i].title);
+									crealoscuadorpelis(arraypeliculas2019[i].idname,arraypeliculas2019[i].title,arraypeliculas2019[i].img);
+
+								}
             
 				traejsonseries2019();
 
-             //   console.log("arraypeliculas2019");
-          // console.log(arraypeliculas2019);
+
+
+
                }
        });
 
@@ -955,6 +1063,7 @@ function fonclielige(thiss){
 
 	if(thiss.id=="ideligepeliculas"){
 		vermenupeliculas();
+		atraspelis();
 
 	}
 
@@ -965,8 +1074,10 @@ mostrardiv("idbtserieselijetemp");
 
 
 }
-
 function vermenupeliculas(){
+	mostrardiv("idbtpelicjetemp");
+ocultardiv("idbtserieselijetemp");
+
 	pauseAllVideos();
 	ocultardiv("idmenunavegar");
 	ocultardiv("iddiviframeyamspeliculas");
@@ -981,6 +1092,8 @@ oculttitulomenuserieselijetempvideo();
 }
 
 function vermenuseries(){
+
+	ocultardiv("idbtpelicjetemp");
 	pauseAllVideos();
 	ocultardiv("idmenunavegar");
 	ocultardiv("iddiviframeyamspeliculas");
@@ -1038,6 +1151,7 @@ vertitulomenuserieselijetempvideo();
 
 
 function fonclihome(){
+	ocultardiv("idbtpelicjetemp");
 	ocultardiv("idbtserieselijetemp");
 	pauseAllVideos();
 	vermenuhome();
@@ -1130,6 +1244,25 @@ crealoscuadroseries(arrayseries2019[i].idname,arrayseries2019[i].title,arrayseri
 
 
 
+function atraspelis(){
+if(arraypeliculas2019){
+	pauseAllVideos();
+	removerelementoshijos("idacaadd");
+vermenupeliculas();
+
+
+
+	for(var i in arraypeliculas2019){
+
+		
+crealoscuadorpelis(arraypeliculas2019[i].idname,arraypeliculas2019[i].title,arraypeliculas2019[i].img);
+
+}
+
+
+}
+
+}
 
 
 
@@ -1190,7 +1323,7 @@ function asignaimgpublicudad(){
 	longitupublicidad=arraypublicdad.length;
 //	console.log(" longitupublicidad  "+longitupublicidad);
 if(idxdearrarypublic>=longitupublicidad){idxdearrarypublic=0;}
-console.log("console.log(idxdearrarypublic);  "+idxdearrarypublic);
+
 	for(var i in ximgelement){
 		if(idxdearrarypublic>=longitupublicidad){idxdearrarypublic=0;}
 //console.log(idxdearrarypublic);
@@ -1236,7 +1369,7 @@ $.ajax({
 						}
 						getelementosclass();
 						asignaimgpublicudad();
-				setintervaluno();
+						setintervaluno();
 					//	console.log(arraypublicdad);
 					 }
 	 });
@@ -1248,8 +1381,8 @@ $.ajax({
 
 }
 
-
-
+ocultardiv("idbtserieselijetemp");
+ocultardiv("idbtpelicjetemp");
 
 traejsonpublicidad();
 
