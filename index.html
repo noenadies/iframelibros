@@ -262,6 +262,24 @@ z-index: 3;
 
 }
 
+
+
+#idbtserieselijetemp{
+
+	position: absolute;
+	top: 1%;
+	left: 75%;
+	width: 60px;
+	height: 33px;
+	z-index: 50;
+background-color: rgb(187, 19, 19);
+
+
+}
+
+
+
+
 </style>
 
   <script src="jquery-3.2.1.min.js" ></script>
@@ -271,6 +289,36 @@ z-index: 3;
 <body onload="iniciatodotodo();">
 
 <div id="idtodo">
+
+
+
+	<div id="idbtserieselijetemp">
+
+		<table style="width: 100%" border="1">
+			<tbody>
+				<tr>
+					<td><button onclick="atrasserietemp();" class="btcontrol">Tp</button>
+					</td>
+					<td><button onclick="atrasserie();" class="btcontrol">SR</button>
+					</td>
+				</tr>
+				<tr>
+					<td><button onclick="fonclihome();" class="btcontrol">HM</button>
+					</td>
+					<td><button class="btcontrol">ok4</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	
+	
+	</div>
+
+
+
+
+
+
 
 
 
@@ -425,10 +473,19 @@ z-index: 3;
 																  </div>
 																</div>
 															  </div>
-												
+															
 															</div>
-												
+													
 												</div>					
+
+											
+
+											
+
+
+
+
+
 
 
 
@@ -463,8 +520,17 @@ z-index: 3;
 
 
 
-
 <div id="iddivpropaganda">
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -579,6 +645,11 @@ function iniciatodotodo(){
 
 }
 
+
+var vtempstidcseries="";var vtempsttitlecseries="";var vtempsturlimgcseries="";
+var vtempstidcseriestemparada="";var vtempsttitlecseriestemparad="";var vtempsturlimgcseriestemparad="";
+
+
 function crealoscuadorpelis(stid){
 
 
@@ -648,7 +719,7 @@ function oncliseriesvideoeste(thissvideo){
 
 
 var vseltempidx=0;
-var vtempseletemp="0";
+var vtempseletemp="";
 var vtempdeseriesutlimg="";
 var vtempidnamedeseries="";
 function oncliseries(thiss){
@@ -674,6 +745,7 @@ vermenuserieselitemporadas();
 
 	if(arrayseries2019[vtempseletemp][ii].idname){
 	//	console.log("nm  "+ arrayseries2019[vtempseletemp][ii].idname);
+
 		crealoscuadroseriesytemp(arrayseries2019[vtempseletemp][ii].idname,arrayseries2019[vtempseletemp][ii].title,vtempdeseriesutlimg);
 	}
 
@@ -689,7 +761,7 @@ function oncliseriestemp(thiss){
 
 vermenuserieselitemporadasvideos();
 tempestevideocajas=thiss.id;
-console.log(vtempseletemp+"  " + tempestevideocajas);
+
 for(var i in arrayseries2019[vtempseletemp][tempestevideocajas]){
 	//console.log( arrayseries2019[vtempseletemp][tempestevideocajas][i].idname);
 
@@ -910,6 +982,7 @@ vertitulomenuseries();
 
 
 function vermenuserieselitemporadas(){
+
 	pauseAllVideos();
 	ocultardiv("idmenunavegar");
 	ocultardiv("iddiviframeyamspeliculas");
@@ -965,6 +1038,93 @@ function vermenuhome(){
 }
 
 
+
+
+function atrasserietemp(){
+if(vtempseletemp!=""){
+	pauseAllVideos();
+	removerelementoshijos("idacaaddserieselijetemp") ;
+	vermenuserieselitemporadas();
+
+
+
+removerelementoshijos("idacaaddserieselijetemp");
+
+
+
+	vtempidnamedeseries=vtempseletemp;
+
+
+for(var i in arrayseries2019){
+	if(arrayseries2019[i].idname==vtempidnamedeseries){vtempdeseriesutlimg=arrayseries2019[i].pg}
+}
+
+vermenuserieselitemporadas();
+
+
+
+	//	console.log("nm  "+ arrayseries2019[i].idname);
+	for(var ii in arrayseries2019[vtempseletemp]){
+	//	crealoscuadroseriesytemp(arrayseries2019[i][ii]);
+
+
+	if(arrayseries2019[vtempseletemp][ii].idname){
+	//	console.log("nm  "+ arrayseries2019[vtempseletemp][ii].idname);
+
+		crealoscuadroseriesytemp(arrayseries2019[vtempseletemp][ii].idname,arrayseries2019[vtempseletemp][ii].title,vtempdeseriesutlimg);
+	}
+
+	
+	}	
+
+
+
+
+
+
+
+
+
+
+
+
+}
+}
+
+
+
+function atrasserie(){
+if(arrayseries2019){
+	pauseAllVideos();
+vermenuseries();
+
+removerelementoshijos("idacaaddseries");
+
+
+	for(var i in arrayseries2019){
+
+
+crealoscuadroseries(arrayseries2019[i].idname,arrayseries2019[i].title,arrayseries2019[i].pg);
+
+}
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 var listelemremo;
 function removerelementoshijos(idele) {
 
@@ -977,8 +1137,12 @@ $("#"+idele).empty();
 function pauseAllVideos() 
     { 
 
-				pasarleeliframepeliculas(temorepruceestevideoserie)
+	try {
+		pasarleeliframepeliculas(temorepruceestevideoserie)
     mostrardiv("iddiviframeyamspeliculas");
+	} catch (error) {
+		
+	}		
 				
     }
 
