@@ -564,7 +564,22 @@ background-color: rgb(187, 19, 19);
                         <td><img id="id7" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
                         </td>
                       </tr>
-    
+		
+											<tr>
+                        <td><img id="id6" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+                        </td>
+                        <td><img id="id7" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+                        </td>
+                      </tr>
+											<tr>
+                        <td><img id="id86" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+                        </td>
+                        <td><img id="id9" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
+                        </td>
+											</tr>
+											
+														
+
                     </tbody>
                   </table>
     
@@ -1147,6 +1162,103 @@ function pauseAllVideos()
     }
 
 ocultardiv("idbtserieselijetemp");
+
+var ximgelement ;
+var contadordeimgpublcidad=0;
+
+function getelementosclass() {
+   ximgelement = document.getElementsByClassName("imgclizq");
+//	ximgelement[0].innerHTML = "Hello World!";
+}
+
+
+function cambiodeimagenesfor(){
+
+	for(var i in a){}
+}
+
+
+function retornaimgpublciidad(){
+
+return ;
+
+}
+var idxdearrarypublic=0;
+var  longitupublicidad=0;
+var unasolavessetintervaluno=1;
+function asignaimgpublicudad(){
+	longitupublicidad=arraypublicdad.length;
+//	console.log(" longitupublicidad  "+longitupublicidad);
+if(idxdearrarypublic>=longitupublicidad){idxdearrarypublic=0;}
+console.log("console.log(idxdearrarypublic);  "+idxdearrarypublic);
+	for(var i in ximgelement){
+		if(idxdearrarypublic>=longitupublicidad){idxdearrarypublic=0;}
+//console.log(idxdearrarypublic);
+
+		ximgelement[i].src=cambimgublic(idxdearrarypublic);//arraypublicdad[idxdearrarypublic].img;
+		idxdearrarypublic=idxdearrarypublic+1;
+
+
+	}
+}
+
+
+function cambimgublic(idx){
+	if(idx>=longitupublicidad){idx=0;}
+	return arraypublicdad[idx].img;
+}
+function setintervaluno(){
+
+if(unasolavessetintervaluno==1){unasolavessetintervaluno=10;
+	setInterval(function (){
+		asignaimgpublicudad();
+	}, 3000);
+}
+
+}
+
+
+var arraypublicdad=[];
+function traejsonpublicidad(){
+
+$.ajax({
+					 
+					 url:   'publicidad.json',
+						dataType:  'json',
+					 type:  'get',
+					 cache:false,
+					 success:  function (data) {
+
+				
+						for(var i in data){
+				
+					 arraypublicdad.push({id:data[i].id,idname:data[i].name,img:data[i].img,pg:data[i].pg,activo:data[i].activo});
+						}
+						getelementosclass();
+						asignaimgpublicudad();
+				setintervaluno();
+					//	console.log(arraypublicdad);
+					 }
+	 });
+
+
+
+
+
+
+}
+
+
+
+
+traejsonpublicidad();
+
+
+
+
+
+
+
 </script>
 
 
