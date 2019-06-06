@@ -488,7 +488,7 @@ background-color: #000000;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
   <a onclick="fvermenupeliculas();" href="#">Peliculas</a>
   <a onclick="fvermenuseries();"  href="#">Series</a>
-  <a href="#">Clients</a>
+  <a onclick="fvermenulibros();" href="#">Libros</a>
   <a href="#">Contact</a>
 </div>
 
@@ -532,6 +532,7 @@ function iniciunoves(){
     focultarmenuidcajas3();
     traejsonpeliculas2019();
     traejsonseries2019();
+    traejsonlibros();
     dodnevaelvideo();
 }
 function denuevovariable(){
@@ -548,6 +549,7 @@ function fonload(){
 function fvermenupeliculas(){
     removerelementoshijos("anadeacapelis");
     removerelementoshijos("anadeacapelis2");
+    removerelementoshijos("anadeacapelis3");
     focultarmenunave()
    // ocultardiv("idabremenu1");
 		ocultardiv("idabremenu1a");
@@ -562,6 +564,25 @@ fvermenuidcajas1();
    
 }
 
+
+function fvermenulibros(){
+    removerelementoshijos("anadeacapelis");
+    removerelementoshijos("anadeacapelis2");
+    removerelementoshijos("anadeacapelis2");
+    focultarmenunave()
+   // ocultardiv("idabremenu1");
+		ocultardiv("idabremenu1a");
+   // mostrasrdiv("idcajas1");
+fvermenuidcajas1();
+
+    for(var i in arraylibros){
+                           
+   
+			crealoscuadorlibros(arraylibros[i].idname,arraylibros[i].title,arraylibros[i].img);
+
+						}
+   
+}
 
 
 
@@ -664,6 +685,58 @@ fvermenuidcajas2()
 
 
 
+
+
+
+
+
+var arraylibros=[];
+
+function traejsonlibros(){
+
+    $.ajax({              
+               url:   'libros.json',
+                dataType:  'json',
+               type:  'get',
+               cache:false,
+               success:  function (data) {
+           
+           
+                for(var i in data){
+                  arraylibros.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pg:data[i].pg,title:data[i].title})
+       
+     
+                }
+
+
+            
+			//	traejsonseries2019();
+
+
+
+
+               }
+       });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 var arraypeliculas2019=[];
 
 function traejsonpeliculas2019(){
@@ -743,6 +816,16 @@ function crealoscuadorpelis(stid,sttitle,sturlimg){
 $("#anadeacapelis").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
 
 }
+function crealoscuadorlibros(stid,sttitle,sturlimg){
+    escribeppeliculas("Libros");
+
+$("#anadeacapelis").append("<div onclick="+"onclilibros(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
+
+}
+
+
+
+
 
 function crealoscuadroseries(stid,sttitle,sturlimg){
 
@@ -787,7 +870,24 @@ focultarmenupeliculas();
 
 
 }
+var vtempestalibrosidname="";
+function onclilibros(thiss){
+focultarmenunave();
+focultarmenupeliculas();
+//alert("aca   "+thiss.id);
+vtempestalibrosidname=thiss.id;
+    if(vtempestalibrosidname!=""){
+       
+        for(var i in arraylibros){
+            if(arraylibros[i].idname==vtempestalibrosidname){
+            //   console.log(i+"    "+ vtempestapeliculaidname+"    "+ arraypeliculas2019[i].idname);
+             pasarleeliframepeliculas(arraylibros[i].pg);
+            }
+        }
+    }
 
+
+}
 
 
 

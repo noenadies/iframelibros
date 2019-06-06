@@ -1,7 +1,7 @@
 {
   "Spidermanunnue" : {
       "id" : "id0",
-    "idname" : "Spidermanunnue",
+    "idname" : "Quimicae",
     "title":"calculo",
     "img" : "img/pelis/spidemanuni.jpg",
     "pg" : "https://drive.google.com/file/d/1ETA7QznnWfLie9vWgH7fZ0VLtfhYyeR7/preview?authuser=0"
@@ -12,15 +12,15 @@
     "idname" : "BirdBox",
     "title":"biologia",
     "img" : "img/pelis/BirdBox.jpg",
-    "pg" : "https://drive.google.com/file/d/1z9UzJ_vcTulfAD8NdYqER_SttvXjVru0/preview?authuser=0"
+    "pg" : "https://drive.google.com/file/d/1UD2jzD8RN6DFW_MO6QeB4KY7IYRQoa8F/preview?authuser=0"
     },
 
     "aladdin" : {
       "id" : "id2",
     "idname" : "fisisca",
-    "title":"Aladdin",
+    "title":"fisisca",
     "img" : "img/pelis/aladdin.jpg",
-    "pg" : "https://drive.google.com/file/d/1V8WTKaQcE_cJcCIjByhxaYRE4e-UiF7a/preview?authuser=0"
+    "pg" : "https://drive.google.com/file/d/1UD2jzD8RN6DFW_MO6QeB4KY7IYRQoa8F/preview?authuser=0"
     }
 
 
