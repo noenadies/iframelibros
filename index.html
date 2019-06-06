@@ -137,6 +137,27 @@ box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15
 
 }
 
+#idmenulibros{
+	position: absolute;
+	top: 0%;
+	left: 20%;
+	width: 80%;
+	height: 100%;
+	z-index: 1;
+background-color: rgb(0, 0, 0);
+overflow: scroll;
+z-index: 3;
+
+
+-webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+
+
+
+
+
+
+}
 
 
 
@@ -180,7 +201,16 @@ background-color: rgb(0, 0, 0);
 }
 
 
+#idcuerpobodylibros{
+    position: absolute;
+	top: 20%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+background-color: rgb(0, 0, 0);
 
+}
 
 #iddiviframeyamspeliculas{
 
@@ -313,6 +343,27 @@ z-index: 3;
 }
 
 
+
+#idbtlibrosjetemp{
+
+	position: absolute;
+	top: 0%;
+	left: 70%;
+	width: 60px;
+	height: 33px;
+	z-index: 50;
+
+
+	border: 0px hidden #1C6EA4;
+
+}
+
+
+
+
+
+
+
 .clbtcontrol{
 
 	-moz-box-shadow: 3px 4px 0px 0px #1564ad;
@@ -430,7 +481,22 @@ border: 0px hidden #1C6EA4;
 
 
 
+	<div class="cltablas" id="idbtlibrosjetemp">
 
+			<table style="width: 100%" border="1">
+				<tbody>
+					<tr>
+						<td><button class="clbtcontrol" onclick="atraslibros();" class="btcontrol">Libros</button>
+						</td>
+						<td><button class="clbtcontrol" onclick="fonclihome();" class="btcontrol">Home</button>
+						</td>
+					</tr>
+			
+				</tbody>
+			</table>
+		
+		
+		</div>
 
 
 
@@ -527,6 +593,34 @@ border: 0px hidden #1C6EA4;
         
         </div>
         
+
+
+
+
+
+
+
+
+        <div id="idmenulibros">
+
+              
+						<div id="idcuerpobodylibros">
+								
+						
+														<div class="py-5" >
+																		<div class="container">
+																			<div id="idacaaddlibros" class="row">
+																			 
+						
+																			
+																			</div>
+																		</div>
+																	</div>
+										
+																</div>
+										
+										</div>
+
 
 
 
@@ -749,6 +843,14 @@ $("#idacaadd").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid
 
 }
 
+function crealoslibros(stid,sttitle,sturlimg){
+
+
+$("#idacaaddlibros").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>"+String(sttitle) +"</p><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div></div></div>");
+
+}
+
+
 function crealoscuadroseries(stid,sttitle,sturlimg){
 
 
@@ -905,7 +1007,7 @@ function traejsonpeliculas2019(){
 
 								for(var i in arraypeliculas2019){
 		
-									console.log(arraypeliculas2019[i].title);
+							//S		console.log(arraypeliculas2019[i].title);
 									crealoscuadorpelis(arraypeliculas2019[i].idname,arraypeliculas2019[i].title,arraypeliculas2019[i].img);
 
 								}
@@ -924,6 +1026,72 @@ function traejsonpeliculas2019(){
 
 
 }
+
+
+
+
+
+
+
+
+
+
+var arraylibros=[];
+
+function traejsonlibros(){
+
+    $.ajax({
+               
+               url:   'libros.json',
+                dataType:  'json',
+               type:  'get',
+               cache:false,
+               success:  function (data) {
+           
+              console.log(data);
+                for(var i in data){
+									arraylibros.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pagina:data[i].pg,title:data[i].title})
+               
+
+				
+               
+                }
+						//		console.log(arraypeliculas2019[i].title);
+
+								for(var i in arraylibros){
+		
+									console.log(arraylibros[i].title);
+									crealoslibros(arraylibros[i].idname,arraylibros[i].title,arraylibros[i].img);
+
+								}
+            
+			//	traejsonseries2019();
+
+
+
+
+               }
+       });
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var cue=0;
 var vvideoserie=1;
@@ -998,6 +1166,21 @@ function verttitulomenupeliculas(){
 }
 
 
+
+function vertitulomenulibros(){
+  //  mostrardiv("idcuerpotitulopeliculas");
+    mostrardiv("idmenulibros");
+
+}
+
+
+function oculttitulomenulibros(){
+	//mostrardiv("idcuerpotitulopeliculas");
+			ocultardiv("idmenulibros");
+
+}
+
+
 function oculttitulomenuseries(){
 //	ocultardiv("idcuerpotitulopeliculas");
 	ocultardiv("idmenuseries");
@@ -1054,6 +1237,19 @@ mostrardiv("idbtserieselijetemp");
 	}
 
 
+	if(thiss.id=="ideligelibros"){
+	vermenulibros();
+
+
+atraslibros();
+
+	}
+
+
+
+
+	
+
 }
 function vermenupeliculas(){
 	mostrardiv("idbtpelicjetemp");
@@ -1088,6 +1284,28 @@ oculttitulomenuserieselijetempvideo();
 vertitulomenuseries();
 			
 }
+
+function vermenulibros(){
+
+	mostrardiv("idbtlibrosjetemp");
+ocultardiv("idbtserieselijetemp");
+
+	pauseAllVideos();
+	ocultardiv("idmenunavegar");
+	ocultardiv("iddiviframeyamspeliculas");
+	oculttitulomenuseries();	
+	oculttitulomenuseries();
+
+oculttitulomenuserieselijetemp();
+oculttitulomenuserieselijetempvideo();
+
+oculttitulomenupeliculas();
+vertitulomenulibros();
+
+}
+
+
+
 
 
 function vermenuserieselitemporadas(){
@@ -1247,6 +1465,28 @@ crealoscuadorpelis(arraypeliculas2019[i].idname,arraypeliculas2019[i].title,arra
 
 
 
+function atraslibros(){
+//	traejsonlibros();
+
+
+if(arraylibros){
+	pauseAllVideos();
+	removerelementoshijos("idacaaddlibros");
+vermenulibros();
+
+
+
+	for(var i in arraylibros){
+
+		
+		crealoslibros(arraylibros[i].idname,arraylibros[i].title,arraylibros[i].img);
+
+}
+
+
+}
+
+}
 
 
 
@@ -1349,8 +1589,14 @@ $.ajax({
 				
 					 arraypublicdad.push({id:data[i].id,idname:data[i].name,img:data[i].img,pg:data[i].pg,activo:data[i].activo});
 						}
+
+					
 						getelementosclass();
 						asignaimgpublicudad();
+
+
+
+
 						setintervaluno();
 					//	console.log(arraypublicdad);
 					 }
@@ -1368,7 +1614,7 @@ ocultardiv("idbtpelicjetemp");
 
 traejsonpublicidad();
 
-
+traejsonlibros();
 
 
 
