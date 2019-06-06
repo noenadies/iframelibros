@@ -1,173 +1,280 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-  <link rel="stylesheet" href="micss.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
-
-#iddivoculta{
-
-position: absolute;
-top: 0%;
-left: 0%;
-width: 100%;
-height: 70px;
-background-color: black;
-z-index: 2;
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        /* Float four columns side by side */
+        .column {
+          float: left;
+          width: 25%;
+          padding: 0 10px;
+        }
+        
+        /* Remove extra left and right margins, due to padding */
+        .row {margin: 0 -5px;}
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+          }
+        }
+        
+        /* Style the counter cards */
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          padding: 16px;
+          text-align: center;
+          background-color: #f1f1f1;
+        }
+        </style>
+<style>
+body {
+  font-family: "Lato", sans-serif;
 }
 
-
-#idembed{
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-}
-#iddiviframeyams{
-
-	position: absolute;
-	top: 0%;
-	left: 20%;
-	width: 60%;
-	height: 80%;
-	z-index: 1;
-
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-#idtodo{
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
-#iddivpropaganda{
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#idtodoelmundo{
     position: absolute;
-	top: 0%;
-	left: 0%;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-}
-
-
-
-
-
-
-
-
-#idclumnaizq{
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	width: 19%;
-	height: 100%;
-	z-index: 2;
-background-color: black;
-
-}
-
-#idclumnader{
-	position: absolute;
-	top: 0%;
-	left: 81%;
-	width: 19%;
-	height: 100%;
-	z-index: 2;
-background-color: black;
-
-}
-
-#idclumnaabajo{
-
-	position: absolute;
-	top: 81%;
-	left: 20%;
-	width: 60%;
-	height: 19%;
-	z-index: 1;
-
-	background-color: rgb(0, 107, 156);
-}
-
-
-.imgclizq{
-
-
-position: relative;
-top: 0%;
-left: 0%;
-width:100%;
+  top: 0%;
+ left: 0%;
+width: 100%;
 height: 100%;
+}
+
+#idponertodo{
+    position: absolute;
+  top: 20%;
+ left: 0%;
+width: 100%;
+height: 35%;
+background-color: rgb(0, 0, 0);
+
+display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 
 }
 
+#idabremenu1{
+    position: absolute;
+  top: 0%;
+ left: 80%;
+z-index: 10;
 
-#idmenupeliculas{
-	position: absolute;
-	top: 0%;
-	left: 20%;
-	width: 80%;
-	height: 100%;
-	z-index: 1;
+}
+
+#idcajas1{
+    position: absolute;
+  top: 0%;
+ left: 0%;
+ width: 100%;
+height: 100%;
+z-index: 4;
+background-color: rgb(0, 0, 0);
+}
+#idcajasup{
+    position: absolute;
+  top: 0%;
+ left: 0%;
+ width: 100%;
+height: 10%;
+z-index: 4;
+background-color: rgba(0, 0, 0, 0.568);
+text-align: center;
+font-size: 16px;
+color: aliceblue;
+}
+
+#idcajasdw{
+    position: absolute;
+  top: 11%;
+ left: 0%;
+ width: 98%;
+height: 87%;
+z-index: 4;
 background-color: rgb(0, 0, 0);
 overflow: scroll;
-z-index: 3;
+}
+#idcierraidcajas1{
+    position: absolute;
+  top: 0%;
+ left: 80%;
+z-index: 10;
+}
 
-
--webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
-
-
-
-
-
+#idabremenu2{
+    position: absolute;
+  top: 0%;
+ left: 80%;
+z-index: 10;
 
 }
 
-#idmenulibros{
-	position: absolute;
-	top: 0%;
-	left: 20%;
-	width: 80%;
-	height: 100%;
-	z-index: 1;
+#idcajas2{
+    position: absolute;
+  top: 0%;
+ left: 0%;
+ width: 100%;
+height: 100%;
+z-index: 4;
+background-color: rgb(0, 0, 0);
+}
+#idcajasup2{
+    position: absolute;
+  top: 0%;
+ left: 0%;
+ width: 100%;
+height: 10%;
+z-index: 4;
+background-color: rgba(0, 0, 0, 0.568);
+text-align: center;
+font-size: 16px;
+color: aliceblue;
+}
+
+#idcajasdw2{
+    position: absolute;
+  top: 11%;
+ left: 0%;
+ width: 98%;
+height: 87%;
+z-index: 4;
 background-color: rgb(0, 0, 0);
 overflow: scroll;
-z-index: 3;
-
-
--webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
-
-
-
-
-
-
+}
+#idcierraidcajas2{
+    position: absolute;
+  top: 0%;
+ left: 80%;
+z-index: 10;
 }
 
 
 
 
-.micuerpo{
 
-width: 120px;
-height: 169px;
+
+
+
+
+#idabremenu3{
+    position: absolute;
+  top: 0%;
+ left: 80%;
+z-index: 10;
 
 }
+
+#idcajas3{
+    position: absolute;
+  top: 0%;
+ left: 0%;
+ width: 100%;
+height: 100%;
+z-index: 4;
+background-color: rgb(0, 0, 0);
+}
+#idcajasup3{
+    position: absolute;
+  top: 0%;
+ left: 0%;
+ width: 100%;
+height: 10%;
+z-index: 4;
+background-color: rgba(0, 0, 0, 0.568);
+text-align: center;
+font-size: 16px;
+color: aliceblue;
+}
+
+#idcajasdw3{
+    position: absolute;
+  top: 11%;
+ left: 0%;
+ width: 98%;
+height: 87%;
+z-index: 4;
+background-color: rgb(0, 0, 0);
+overflow: scroll;
+}
+#idcierraidcajas3{
+    position: absolute;
+  top: 0%;
+ left: 80%;
+z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .imgp{
     width: 100px;
@@ -175,615 +282,136 @@ height: 100px;
 
 }
 
-
-
-#idcuerpotitulopeliculas{
-	position: absolute;
-	top: 15%;
-	left: 40%;
-	width: 20%;
-	height:24px;
-	z-index: 4;
-background-color: rgb(0, 0, 0);
-
-z-index:4;
-
-}
-#idcuerpobodypeliculas{
+#idocultaeso{
     position: absolute;
-	top: 20%;
-	left: 0%;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-background-color: rgb(0, 0, 0);
-
-}
-
-
-#idcuerpobodylibros{
-    position: absolute;
-	top: 20%;
-	left: 0%;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-background-color: rgb(0, 0, 0);
-
-}
-
-#iddiviframeyamspeliculas{
-
-	position: absolute;
-	top: 0%;
-	left: 20%;
-	width:80%;
-	height: 98%;
-	z-index: 1;
-background-color: rgb(0, 0, 0);
-
+  top: 0%;
+ left: 70%;
+ width:30%;
+ height: 50%; 
 z-index: 10;
+background-color: #000000;
+}
 
+#idpeliculasvisor{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 
-.idiframemivideo{
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-      }
-
-#idbtmenu{
-
-position: absolute;
-top: 100%;
-left: 40%;
-align-content: center;
-width: 20%;
-height: 30px;
-}
-
-
-
-
-#idmenunavegar{
-
-position: absolute;
-top: 0%;
-left: 0%;
-width: 100%;
-height: 100%;
-z-index: 20;
-background-color: black
-}
-
-
-
-#idmenuseries{
-
-	position: absolute;
-	top: 0%;
-	left: 20%;
-	width: 80%;
-	height: 100%;
-	z-index: 1;
-background-color: rgb(0, 0, 0);
-overflow: scroll;
-z-index: 3;
-
-
--webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
-
-
-
-
-
-}
-
-
-#idmenuserieselijetemp{
-	position: absolute;
-	top: 0%;
-	left: 20%;
-	width: 80%;
-	height: 99%;
-	z-index: 1;
-background-color: rgb(1, 14, 13);
-overflow: scroll;
-z-index: 3;	
-}
-
-
-#idmenuserieselijetempvideo{
-	position: absolute;
-	top: 0%;
-	left: 20%;
-	width: 80%;
-	height: 99%;
-	z-index: 1;
-background-color: rgb(0, 0, 0);
-overflow: scroll;
-z-index: 3;	
-
-
-
-
-
-}
-
-
-
-#idbtserieselijetemp{
-
-	position: absolute;
-	top: 1%;
-	left: 80%;
-	width: 20%;
-	height: 30px;
-	z-index: 50;
-
-
-	border: 0px hidden #1C6EA4;
-}
-
-#idbtpelicjetemp{
-	position: absolute;
-	top: 0%;
-	left: 70%;
-	width: 60px;
-	height: 33px;
-	z-index: 50;
-
-
-	border: 0px hidden #1C6EA4;
-}
-
-
-
-#idbtlibrosjetemp{
-
-	position: absolute;
-	top: 0%;
-	left: 70%;
-	width: 60px;
-	height: 33px;
-	z-index: 50;
-
-
-	border: 0px hidden #1C6EA4;
-
-}
-
-
-
-
-
-
-
-.clbtcontrol{
-
-	-moz-box-shadow: 3px 4px 0px 0px #1564ad;
-	-webkit-box-shadow: 3px 4px 0px 0px #1564ad;
-	box-shadow: 3px 4px 0px 0px #1564ad;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
-	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
-	background-color:#79bbff;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
-	border:1px solid #337bc4;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	font-weight:bold;
-	padding:12px 44px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
-height: 20px;
-text-align: center;
-width: 45px;
-padding: 0px;
-	font-size: 11px;
-	border: 0px hidden #1C6EA4;
-
-}
-
-.cltablas{
-	-webkit-border-radius: 0px;
--moz-border-radius: 0px;
-border-radius: 0px;
-border: 5px hidden #1C6EA4;
-border: 0px hidden #1C6EA4;
-}
-#idtablplucidadizq{
-
-
-	width: 100%; border:0;
-	
-}
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script src="jquery-3.2.1.min.js" ></script>
+</style>  <script src="jquery-3.2.1.min.js" ></script>
 </head>
+<body onresize="fonresize();" onload="fonload();">
+
+    <div id="idtodoelmundo">
+
+            <div id="idcajas1">
+
+<div id="idcajasup">
+        <span id="idcierraidcajas1" style="font-size:30px;cursor:pointer" onclick="fcierraidcajas1();">&times</span>
+
+    <p id="idppeliculas">peliculas</p>
+</div>
+
+<div id="idcajasdw">
 
 
-<body onload="iniciatodotodo();">
-
-<div id="idtodo">
-
-
-
-	<div id="idbtserieselijetemp">
-
-		<table class="cltablas" style="width: 100%" border="1">
-			<tbody>
-				<tr>
-					<td><button class="clbtcontrol" onclick="atrasserietemp();" class="btcontrol">Temorada</button>
-					</td>
-					<td><button class="clbtcontrol" onclick="atrasserie();" class="btcontrol">Series</button>
-					</td>
-				</tr>
-				<tr>
-					<td><button class="clbtcontrol" onclick="fonclihome();" class="btcontrol">Home</button>
-					</td>
-					<td>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	
-	
-	</div>
-
-
-	<div class="cltablas" id="idbtpelicjetemp">
-
-		<table style="width: 100%" border="1">
-			<tbody>
-				<tr>
-					<td><button class="clbtcontrol" onclick="atraspelis();" class="btcontrol">Peliculas</button>
-					</td>
-					<td><button class="clbtcontrol" onclick="fonclihome();" class="btcontrol">Home</button>
-					</td>
-				</tr>
-		
-			</tbody>
-		</table>
-	
-	
-	</div>
+        <h2>Responsive Column Cards</h2>
+        <p>Resize the browser window to see the effect.</p>
+        
+        <div id="anadeacapelis" class="row">
+       
+        
+          <div id=+String(stid)+ onclick="onclipeliculas(this);"  class="column"><div class="card"><h3>Card 4</h3><img class='imgp' src="img/juegodetronos.jpg" alt='Card image cap'></div></div>
 
 
 
-
-	<div class="cltablas" id="idbtlibrosjetemp">
-
-			<table style="width: 100%" border="1">
-				<tbody>
-					<tr>
-						<td><button class="clbtcontrol" onclick="atraslibros();" class="btcontrol">Libros</button>
-						</td>
-						<td><button class="clbtcontrol" onclick="fonclihome();" class="btcontrol">Home</button>
-						</td>
-					</tr>
-			
-				</tbody>
-			</table>
-		
-		
-		</div>
-
-
-
-
-
-
-<div id="idmenunavegar">
-
-		<div class="py-5" >
-				<div class="container">
-				  <div class="row">
-					<div id="ideligerevistas" onclick="fonclielige(this);" class="col-md-3">
-					  <div class="card">
-						<div class="card-body">
-						  <h5 class="card-title">REVISTAS</h5>
-						  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-						</div>
-						<img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
-					  </div>
-					</div>
-					<div id="ideligeseries" onclick="fonclielige(this);" class="col-md-3">
-							<div class="card">
-							  <div class="card-body">
-								<h5 class="card-title">SERIES</h5>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-							  </div>
-							  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
-							</div>
-						  </div>	<div id="ideligepeliculas" onclick="fonclielige(this);"  class="col-md-3">
-								<div class="card">
-								  <div class="card-body">
-									<h5 class="card-title">PELICULAS</h5>
-									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-								  </div>
-								  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
-								</div>
-							  </div>	<div id="ideligelibros" onclick="fonclielige(this);" class="col-md-3">
-									<div class="card">
-									  <div class="card-body">
-										<h5 class="card-title">LIBROS</h5>
-										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-									  </div>
-									  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
-									</div>
-								  </div>	<div id="ideligecursos" onclick="fonclielige(this);" class="col-md-3">
-										<div class="card">
-										  <div class="card-body">
-											<h5 class="card-title">CURSOS</h5>
-											<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-											<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-										  </div>
-										  <img class="card-img-bottom" src="https://static.pingendo.com/cover-bubble-dark.svg" alt="Card image cap">
-										</div>
-									  </div>
-				  </div>
-				</div>
-			  </div>
-	
+        </div>
 
 
 
 
 </div>
 
+      
+</div>
 
 
 
+<div id="idcajas2">
 
-
-
-
-
-        <div id="idmenupeliculas">
-
-              
-<div id="idcuerpobodypeliculas">
-    
-
-                <div class="py-5" >
-                        <div class="container">
-                          <div id="idacaadd" class="row">
-                           
-
-                          
-                          </div>
-                        </div>
-                      </div>
+        <div id="idcajasup2">
+                <span id="idcierraidcajas2" style="font-size:30px;cursor:pointer" onclick="fcierraidcajas1();">&times</span>
         
-                    </div>
+            <p id="idppeliculas2">Temporadas</p>
+        </div>
+        
+        <div id="idcajasdw2">
+        
+        
+                <h2>Responsive Column Cards</h2>
+                <p>Resize the browser window to see the effect.</p>
+                
+                <div id="anadeacapelis2" class="row">
+               
+                
+                  <div id=+String(stid)+ onclick="onclipeliculas(this);"  class="column"><div class="card"><h3>Card 4</h3><img class='imgp' src="img/juegodetronos.jpg" alt='Card image cap'></div></div>
+        
+        
+        
+                </div>
+        
+        
+        
         
         </div>
         
-
-
-
-
-
-
-
-
-        <div id="idmenulibros">
-
               
-						<div id="idcuerpobodylibros">
-								
-						
-														<div class="py-5" >
-																		<div class="container">
-																			<div id="idacaaddlibros" class="row">
-																			 
-						
-																			
-																			</div>
-																		</div>
-																	</div>
-										
-																</div>
-										
-										</div>
+        </div>
 
 
 
 
+        <div id="idcajas3">
+
+                <div id="idcajasup3">
+                        <span id="idcierraidcajas3" style="font-size:30px;cursor:pointer" onclick="fcierraidcajas3();">&times</span>
+                
+                    <p id="idppeliculas3">Videos</p>
+                </div>
+                
+                <div id="idcajasdw3">
+                
+                
+                        <h2>Responsive Column Cards</h2>
+                        <p>Resize the browser window to see the effect.</p>
+                        
+                        <div id="anadeacapelis3" class="row">
+                       
+                        
+                          <div id=+String(stid)+ onclick="onclipeliculas(this);"  class="column"><div class="card"><h3>Card 4</h3><img class='imgp' src="img/juegodetronos.jpg" alt='Card image cap'></div></div>
+                
+                
+                
+                        </div>
+                
+                
+                
+                
+                </div>
+                
+                      
+                </div>
+        
 
 
+<div id="idponertodo">
+<div id="idocultaeso"></div>
 
-
-        <div id="iddiviframeyamspeliculas">
-                <div id="iddivoculta"></div>
-            
-                <iframe id="idpeliculasvisor" class="idiframemivideo"
-                src="https://drive.google.com/file/d/11Pv1lwaODCjRYlBpG1MlXpEZEmFjLXlH/preview?authuser=0"
-                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							
-				<button onclick="fonclihome();" id="idbtmenu">MENU o home</button>
-				
-				</div>
-            
-			
-				
-
-				<div id="idmenuseries">
-
-              
-						<div id="idcuerpobodyseries">
-							
-						
-										<div class="py-5" >
-												<div class="container">
-												  <div id="idacaaddseries" class="row">
-												   
-						
-												  
-												  </div>
-												</div>
-											  </div>
-								
-											</div>
-								
-								</div>
-
-
-
-
-								<div id="idmenuserieselijetemp">
-
-              
-										<div id="idcuerpobodyserieselijetemp">
-											
-										
-														<div class="py-5" >
-																<div class="container">
-																  <div id="idacaaddserieselijetemp" class="row">
-																   
-										
-																  
-																  </div>
-																</div>
-															  </div>
-															
-															</div>
-													
-												</div>					
-
-											
-
-											
-
-
-
-
-
-
-
-
-            
-												<div id="idmenuserieselijetempvideo">
-
-              
-														<div id="idcuerpobodyserieselijetempvideo">
-															
-														
-																		<div class="py-5" >
-																				<div class="container">
-																				  <div id="idacaaddserieselijetempvideo" class="row">
-																				   
-														
-																				  
-																				  </div>
-																				</div>
-																			  </div>
-																
-																			</div>
-																
-																</div>
-
-
-
-
-
-
-
-
-
-
-
-<div id="iddivpropaganda">
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<div id="idclumnaizq">
-
-		
-			
-                <table id="idtablplucidadizq">
-                    <tbody>
-                      <tr>
-                        <td><img id="id0" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
-                        </td>
-                        <td><img id="id1" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><img id="id2" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
-                        </td>
-                        <td><img id="id3" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
-                        </td>
-                      </tr>
-                  
-                      <tr>
-													<td><img id="id2" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
-													</td>
-													<td><img id="id3" class="imgclizq" src="https://static.pelisplus.co/movie/cover/original/c47d6fb02891a31aae2f66feae4cc18c.jpg" alt="Smiley face" >
-													</td>
-												</tr>
-										
-											
-														
-
-                    </tbody>
-                  </table>
-    
-    
-    
-    
-    
-            </div>
-    
-    
-
-
-
-
+        <iframe id="idpeliculasvisor" class="idiframemivideo"
+        src="https://drive.google.com/file/d/11Pv1lwaODCjRYlBpG1MlXpEZEmFjLXlH/preview?authuser=0"
+         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
 
 
 </div>
@@ -798,114 +426,101 @@ border: 0px hidden #1C6EA4;
 
 
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+  <a onclick="fvermenupeliculas();" href="#">Peliculas</a>
+  <a onclick="fvermenuseries();"  href="#">Series</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-            </div>
-            
-
-
-
-
-
- 
+<span id="idabremenu1" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
 <script>
+function openNav() {
+  fvermenunave();
+
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
 
-//"<div class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>capitan america </p><img class='card-img-bottom' src='https://static.pelisplus.co/movie/cover/original/ac09a050f6c9861759cd11b64a30e5f9.jpg' alt='Card image cap'></div></div></div></div>"
-
-function iniciatodotodo(){
+var vhp=1;
+var vwp=1;
+var vlp=0.0;
+    var vw=window.innerWidth;
+        var vh=window.innerHeight;
+     
+function fonresize(){
+     vw=window.innerWidth;
+     vh=window.innerHeight;
+     document.getElementById("idtodoelmundo").style.height=String(vh*vhp)+"px";
+    document.getElementById("idtodoelmundo").style.width=String(vw*vwp)+"px";
+    document.getElementById("idtodoelmundo").style.left=String(vw*vlp)+"px";
+    dodnevaelvideo()
+}
+function iniciunoves(){
+ vw=window.innerWidth;
+  vh=window.innerHeight;
+    document.getElementById("idtodoelmundo").style.height=String(vh*vhp)+"px";
+    document.getElementById("idtodoelmundo").style.width=String(vw*vwp)+"px";
+    document.getElementById("idtodoelmundo").style.left=String(vw*vlp)+"px";
+ 
+    focultarmenuidcajas1();
+    focultarmenuidcajas2();
+    focultarmenuidcajas3();
     traejsonpeliculas2019();
-	funcioninciionload();
-	
-	oculttitulomenuserieselijetemp();
+    traejsonseries2019();
+    dodnevaelvideo();
+}
+function denuevovariable(){
+    vw=window.innerWidth;
+     vh=window.innerHeight;
+}
+
+function fonload(){
+    iniciunoves();
+  
 
 }
 
+function fvermenupeliculas(){
+    removerelementoshijos("anadeacapelis");
+    removerelementoshijos("anadeacapelis2");
+    focultarmenunave()
+    ocultardiv("idabremenu1");
+   // mostrasrdiv("idcajas1");
+fvermenuidcajas1();
 
-var vtempstidcseries="";var vtempsttitlecseries="";var vtempsturlimgcseries="";
-var vtempstidcseriestemparada="";var vtempsttitlecseriestemparad="";var vtempsturlimgcseriestemparad="";
+    for(var i in arraypeliculas2019){
+                           
+									crealoscuadorpelis(arraypeliculas2019[i].idname,arraypeliculas2019[i].title,arraypeliculas2019[i].img);
 
-
-function crealoscuadorpelis(stid,sttitle,sturlimg){
-
-
-$("#idacaadd").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>"+String(sttitle) +"</p><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div></div></div>");
-
-}
-
-function crealoslibros(stid,sttitle,sturlimg){
-
-
-$("#idacaaddlibros").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>"+String(sttitle) +"</p><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div></div></div>");
-
-}
-
-
-function crealoscuadroseries(stid,sttitle,sturlimg){
-
-
-$("#idacaaddseries").append("<div onclick="+"oncliseries(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>"+String(sttitle) +"</p><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div></div></div>");
-
-}
-
-function crealoscuadroseriesytemp(stid,sttitle,sturlimg){
-
-
-$("#idacaaddserieselijetemp").append("<div onclick="+"oncliseriestemp(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>"+String(sttitle) +"</p><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div></div></div>");
-
-}
-
-function crealoscuadroseriesytempvideos(stid,sttitle,sturlimg){
-
-
-$("#idacaaddserieselijetempvideo").append("<div onclick="+"oncliseriestempvideo(this);"+" id="+String(stid)+" class='col-md-3'><div class='card'><div class='card-body'><div class='micuerpo'> <p class='card-text'>"+String(sttitle) +"</p><img class='imgp' src="+String(sturlimg)+"  alt='Card image cap'></div></div></div></div>");
-
-}
-
-
-var vtemppelictemp="";
-var cu=0;
-function onclipeliculas(thiss){
-
-	removerelementoshijos("idacaadd");
-
-
-vtemppelictemp=thiss.id;
-for(var i in arraypeliculas2019 ){
-    if(arraypeliculas2019[i].idname==thiss.id){
-      pasarleeliframepeliculas(arraypeliculas2019[i].pagina)
-    mostrardiv("iddiviframeyamspeliculas");
-
-
-
-cu=cu+1;
-  //console.log(arraypeliculas2019[i].pagina);
- //  alert(thiss.id)
-    }
-}
+								}
    
 }
-var temorepruceestevideoserie="";
-function oncliseriesvideoeste(thissvideo){
-
-
-	temorepruceestevideoserie=thissvideo;
-      pasarleeliframepeliculas(temorepruceestevideoserie)
-    mostrardiv("iddiviframeyamspeliculas");
 
 
 
 
+function fvermenuseries(){
+    escribeppeliculas("Series");
+    removerelementoshijos("anadeacapelis");
+    removerelementoshijos("anadeacapelis2");
+    focultarmenunave()
+    ocultardiv("idabremenu1");
+   // mostrasrdiv("idcajas1");
+fvermenuidcajas1();
+focultarmenuidcajas2();
+    for(var i in arrayseries2019){
+                           
+									crealoscuadroseries(arrayseries2019[i].idname,arrayseries2019[i].title,arrayseries2019[i].pg);
+
+								}
    
 }
 
@@ -913,72 +528,78 @@ function oncliseriesvideoeste(thissvideo){
 
 
 
+function focultarmenupeliculas(){
+    mostrasrdiv("idabremenu1");
+    ocultardiv("idcajas1");
 
-
-var vseltempidx=0;
-var vtempseletemp="";
-var vtempdeseriesutlimg="";
-var vtempidnamedeseries="";
-function oncliseries(thiss){
-	removerelementoshijos("idacaaddserieselijetemp");
-
-
-	vtempseletemp=thiss.id;
-	vtempidnamedeseries=thiss.id;
-
-
-for(var i in arrayseries2019){
-	if(arrayseries2019[i].idname==vtempidnamedeseries){vtempdeseriesutlimg=arrayseries2019[i].pg}
+    fveriframepeliculas();
+}
+function fvermenunave(){
+    focultarmenuidcajas1();
+    focultarmenuidcajas2();
+    mostrasrdiv("mySidenav");
+   
+}
+function focultarmenunave(){
+focultarframepeliculas();
+    ocultardiv("mySidenav");
 }
 
-vermenuserieselitemporadas();
+function fvermenuidcajas2(){
+    focultarframepeliculas();
+  mostrasrdiv("idcajas2");
+ 
+}
+function focultarmenuidcajas2(){
 
-
-
-	//	console.log("nm  "+ arrayseries2019[i].idname);
-	for(var ii in arrayseries2019[vtempseletemp]){
-	//	crealoscuadroseriesytemp(arrayseries2019[i][ii]);
-
-
-	if(arrayseries2019[vtempseletemp][ii].idname){
-	//	console.log("nm  "+ arrayseries2019[vtempseletemp][ii].idname);
-
-		crealoscuadroseriesytemp(arrayseries2019[vtempseletemp][ii].idname,arrayseries2019[vtempseletemp][ii].title,vtempdeseriesutlimg);
-	}
-
-	
-	}	}
-
-var tempestevideocajas="";
-var tempconteovideoseries=1;
-function oncliseriestemp(thiss){
-	tempconteovideoseries=1;
-	removerelementoshijos("idacaaddserieselijetempvideo");
-
-
-vermenuserieselitemporadasvideos();
-tempestevideocajas=thiss.id;
-
-for(var i in arrayseries2019[vtempseletemp][tempestevideocajas]){
-	//console.log( arrayseries2019[vtempseletemp][tempestevideocajas][i].idname);
-
-if(arrayseries2019[vtempseletemp][tempestevideocajas][i].idname){
-
-	crealoscuadroseriesytempvideos(arrayseries2019[vtempseletemp][tempestevideocajas][i].pg,"Video "+String(tempconteovideoseries),vtempdeseriesutlimg);
-tempconteovideoseries=tempconteovideoseries+1;
-}	}
-
-
-
+  ocultardiv("idcajas2");
 }
 
-function oncliseriestempvideo(thiss){
+function fvermenuidcajas3(){
+    focultarframepeliculas();
+  mostrasrdiv("idcajas3");
+ 
+}
+function focultarmenuidcajas3(){
 
-//alert("aca video "+ thiss.id);
+  ocultardiv("idcajas3");
+}
 
 
-oncliseriesvideoeste(thiss.id)
 
+function fvermenuidcajas1(){
+  focultarframepeliculas();
+  mostrasrdiv("idcajas1");
+ 
+}
+function focultarmenuidcajas1(){
+fveriframepeliculas();
+  ocultardiv("idcajas1");
+}
+
+
+
+
+
+function mostrasrdiv(st){
+    document.getElementById(st).style.display="block";
+}
+function ocultardiv(st){
+    document.getElementById(st).style.display="none";
+}
+function fcierraidcajas1(){
+
+    focultarmenupeliculas();
+    fvermenunave();
+}
+
+function fcierraidcajas3(){
+  focultarmenuidcajas3();
+fvermenuidcajas2()
+
+
+//focultarmenupeliculas();
+//fvermenunave();
 }
 
 
@@ -987,83 +608,22 @@ var arraypeliculas2019=[];
 
 function traejsonpeliculas2019(){
 
-    $.ajax({
-               
+    $.ajax({              
                url:   'peliculas2019.json',
                 dataType:  'json',
                type:  'get',
                cache:false,
                success:  function (data) {
            
-              console.log(data);
-                for(var i in data){
-               arraypeliculas2019.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pagina:data[i].pg,title:data[i].title})
-               
-
-				
-               
-                }
-						//		console.log(arraypeliculas2019[i].title);
-
-								for(var i in arraypeliculas2019){
-		
-							//S		console.log(arraypeliculas2019[i].title);
-									crealoscuadorpelis(arraypeliculas2019[i].idname,arraypeliculas2019[i].title,arraypeliculas2019[i].img);
-
-								}
-            
-				traejsonseries2019();
-
-
-
-
-               }
-       });
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-var arraylibros=[];
-
-function traejsonlibros(){
-
-    $.ajax({
-               
-               url:   'libros.json',
-                dataType:  'json',
-               type:  'get',
-               cache:false,
-               success:  function (data) {
            
-              console.log(data);
                 for(var i in data){
-									arraylibros.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pagina:data[i].pg,title:data[i].title})
-               
-
-				
-               
+           arraypeliculas2019.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pg:data[i].pg,title:data[i].title})
+       
+     
                 }
-						//		console.log(arraypeliculas2019[i].title);
+						
 
-								for(var i in arraylibros){
-		
-									console.log(arraylibros[i].title);
-									crealoslibros(arraylibros[i].idname,arraylibros[i].title,arraylibros[i].img);
-
-								}
+						
             
 			//	traejsonseries2019();
 
@@ -1080,27 +640,10 @@ function traejsonlibros(){
 
 }
 
+var arrayseries2019=[];
 
-
-
-
-
-
-
-
-
-
-
-
-
-var cue=0;
-var vvideoserie=1;
-var strindelosvideos="";
-var  arrayseries2019=[];
-var tempnodeseries;
 function traejsonseries2019(){
-
-$.ajax({
+    $.ajax({
 		   
 		   url:   'series.json',
 			dataType:  'json',
@@ -1108,21 +651,15 @@ $.ajax({
 		   cache:false,
 		   success:  function (data) {
 			arrayseries2019=data;
-	/*	for(var i in arrayseries2019){
-for(var ii in arrayseries2019[i]){	
-for(var iii in arrayseries2019[i][ii]){
-	console.log(arrayseries2019[i][ii][iii].id);
-}
-}
-	}*/ 
-		
+//console.log(arrayseries2019);
+	/*	
 	for(var i in arrayseries2019){
 
 
 		crealoscuadroseries(arrayseries2019[i].idname,arrayseries2019[i].title,arrayseries2019[i].pg);
 		
 	}
-
+*/
 
 		   }
    });
@@ -1137,170 +674,57 @@ for(var iii in arrayseries2019[i][ii]){
 
 
 
+var vtempestapeliculaidname="";
 
 
+function crealoscuadorpelis(stid,sttitle,sturlimg){
+    escribeppeliculas("Peliculas");
 
-
-function ocultardiv(st){ document.getElementById(st).style.display="none";
-}
-function mostrardiv(st){ document.getElementById(st).style.display="block";
-}
-
-
-function pasarleeliframepeliculas(stsrc){
-    document.getElementById("idpeliculasvisor").src=stsrc;
-}
-
-
-
-
-function oculttitulomenupeliculas(){
-  //  ocultardiv("idcuerpotitulopeliculas");
-    ocultardiv("idmenupeliculas");
+$("#anadeacapelis").append("<div onclick="+"onclipeliculas(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
 
 }
-function verttitulomenupeliculas(){
-  //  mostrardiv("idcuerpotitulopeliculas");
-    mostrardiv("idmenupeliculas");
+
+function crealoscuadroseries(stid,sttitle,sturlimg){
+
+
+    $("#anadeacapelis").append("<div onclick="+"oncliseries(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
+
+}
+
+function crealoscuadroseriesytemp(stid,sttitle,sturlimg){
+
+
+    $("#anadeacapelis2").append("<div onclick="+"oncliseriestemp(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
 
 }
 
 
 
-function vertitulomenulibros(){
-  //  mostrardiv("idcuerpotitulopeliculas");
-    mostrardiv("idmenulibros");
+function crealoscuadroseriesytempvideos(stid,sttitle,sturlimg){
+
+  $("#anadeacapelis3").append("<div onclick="+"oncliseriestempvideo(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
+
 
 }
 
 
-function oculttitulomenulibros(){
-	//mostrardiv("idcuerpotitulopeliculas");
-			ocultardiv("idmenulibros");
-
-}
 
 
-function oculttitulomenuseries(){
-//	ocultardiv("idcuerpotitulopeliculas");
-	ocultardiv("idmenuseries");
-
-}
-function vertitulomenuseries(){
-	//mostrardiv("idcuerpotitulopeliculas");
-				mostrardiv("idmenuseries");
-
-}
+function onclipeliculas(thiss){
+focultarmenunave();
+focultarmenupeliculas();
+//alert("aca   "+thiss.id);
+    vtempestapeliculaidname=thiss.id;
+    if(vtempestapeliculaidname!=""){
        
-function vertitulomenuserieselijetemp(){
-	//mostrardiv("idcuerpotitulopeliculas");
-				mostrardiv("idmenuserieselijetemp");
+        for(var i in arraypeliculas2019){
+            if(arraypeliculas2019[i].idname==vtempestapeliculaidname){
+            //   console.log(i+"    "+ vtempestapeliculaidname+"    "+ arraypeliculas2019[i].idname);
+             pasarleeliframepeliculas(arraypeliculas2019[i].pg);
+            }
+        }
+    }
 
-}
-function oculttitulomenuserieselijetemp(){
-//	ocultardiv("idcuerpotitulopeliculas");
-	ocultardiv("idmenuserieselijetemp");
-
-}
-
-
-function vertitulomenuserieselijetempvideo(){
-	//mostrardiv("idcuerpotitulopeliculas");
-				mostrardiv("idmenuserieselijetempvideo");
-
-}
-function oculttitulomenuserieselijetempvideo(){
-//	ocultardiv("idcuerpotitulopeliculas");
-	ocultardiv("idmenuserieselijetempvideo");
-
-}
-
-
-
-function funcioninciionload(){
-    ocultardiv("iddiviframeyamspeliculas");
-}
-
-
-
-function fonclielige(thiss){
-
-	if(thiss.id=="ideligepeliculas"){
-		vermenupeliculas();
-		atraspelis();
-
-	}
-
-	if(thiss.id=="ideligeseries"){
-		vermenuseries();
-mostrardiv("idbtserieselijetemp");
-	}
-
-
-	if(thiss.id=="ideligelibros"){
-	vermenulibros();
-
-
-atraslibros();
-
-	}
-
-
-
-
-	
-
-}
-function vermenupeliculas(){
-	mostrardiv("idbtpelicjetemp");
-ocultardiv("idbtserieselijetemp");
-
-	pauseAllVideos();
-	ocultardiv("idmenunavegar");
-	ocultardiv("iddiviframeyamspeliculas");
-	oculttitulomenuseries();	
-	oculttitulomenuseries();
-
-oculttitulomenuserieselijetemp();
-oculttitulomenuserieselijetempvideo();
-
-	verttitulomenupeliculas();
-			
-}
-
-function vermenuseries(){
-
-	ocultardiv("idbtpelicjetemp");
-	pauseAllVideos();
-	ocultardiv("idmenunavegar");
-	ocultardiv("iddiviframeyamspeliculas");
-			
-	oculttitulomenupeliculas();		
-oculttitulomenuserieselijetemp();
-oculttitulomenuseries();
-
-oculttitulomenuserieselijetemp();
-oculttitulomenuserieselijetempvideo();
-vertitulomenuseries();
-			
-}
-
-function vermenulibros(){
-
-	mostrardiv("idbtlibrosjetemp");
-ocultardiv("idbtserieselijetemp");
-
-	pauseAllVideos();
-	ocultardiv("idmenunavegar");
-	ocultardiv("iddiviframeyamspeliculas");
-	oculttitulomenuseries();	
-	oculttitulomenuseries();
-
-oculttitulomenuserieselijetemp();
-oculttitulomenuserieselijetempvideo();
-
-oculttitulomenupeliculas();
-vertitulomenulibros();
 
 }
 
@@ -1308,102 +732,96 @@ vertitulomenulibros();
 
 
 
-function vermenuserieselitemporadas(){
+var tempestevideocajas="";
+var tempconteovideoseries=1;
+function oncliseriestemp(thiss){
 
-	pauseAllVideos();
-	ocultardiv("idmenunavegar");
-	ocultardiv("iddiviframeyamspeliculas");
-			
-	oculttitulomenupeliculas();		
-oculttitulomenuseries();
+    //alert("aca   "+thiss.id);
+	tempconteovideoseries=1;
+	removerelementoshijos("anadeacapelis3");
 
-oculttitulomenuseries();
 
-oculttitulomenuserieselijetemp();
-oculttitulomenuserieselijetempvideo();
+fvermenuidcajas3();
+tempestevideocajas=thiss.id;
 
-vertitulomenuserieselijetemp();
-			
+for(var i in arrayseries2019[vtempseletemp][tempestevideocajas]){
+	//console.log( arrayseries2019[vtempseletemp][tempestevideocajas][i].idname);
+
+if(arrayseries2019[vtempseletemp][tempestevideocajas][i].idname){
+  //  console.log(arrayseries2019[vtempseletemp][tempestevideocajas]);
+	crealoscuadroseriesytempvideos(arrayseries2019[vtempseletemp][tempestevideocajas][i].pg,"Video "+String(tempconteovideoseries),vtempdeseriesutlimg);
+tempconteovideoseries=tempconteovideoseries+1;
+}	}
+
+
+
+}
+
+var estevideoyatempserieurl="";
+function oncliseriestempvideo(thiss){
+  estevideoyatempserieurl=thiss.id;
+
+if(estevideoyatempserieurl!=""){
+
+
+   
+
+        focultarmenuidcajas3();focultarmenuidcajas2();focultarmenuidcajas1();
+   //  console.log(thiss);
+   pasarleeliframepeliculas(estevideoyatempserieurl);
+      
+    
 }
 
 
-
-function vermenuserieselitemporadasvideos(){
-	pauseAllVideos();
-
-	ocultardiv("idmenunavegar");
-	ocultardiv("iddiviframeyamspeliculas");
-			
-	oculttitulomenupeliculas();		
-oculttitulomenuseries();
-
-oculttitulomenuserieselijetemp();
-
-vertitulomenuserieselijetempvideo();
+}
+var temorepruceestevideoserie="";
+function oncliseriesvideoeste(thissvideo){
 
 
-			
+	temorepruceestevideoserie=thissvideo;
+    //  pasarleeliframepeliculas(temorepruceestevideoserie)
+   // mostrardiv("iddiviframeyamspeliculas");
+
+
+
+
+   
 }
 
+var vseltempidx=0;
+var vtempseletemp="";
+var vtempdeseriesutlimg="";
+var vtempidnamedeseries="";
+function oncliseries(thiss){
+	//removerelementoshijos("idacaaddserieselijetemp");
+//alert("selecc "+thiss.id);
 
-
-
-
-function fonclihome(){
-	ocultardiv("idbtpelicjetemp");
-	ocultardiv("idbtserieselijetemp");
-	pauseAllVideos();
-	vermenuhome();
-}
-function vermenuhome(){
-	mostrardiv("idmenunavegar");
-
-	ocultardiv("iddiviframeyamspeliculas");
-			
-//	ocultardiv("idcuerpotitulopeliculas");
-	ocultardiv("idmenupeliculas");
-			
-}
-
-
-
-
-function atrasserietemp(){
-if(vtempseletemp!=""){
-	pauseAllVideos();
-	removerelementoshijos("idacaaddserieselijetemp") ;
-	vermenuserieselitemporadas();
-
-
-
-removerelementoshijos("idacaaddserieselijetemp");
-
-
-
-	vtempidnamedeseries=vtempseletemp;
+	vtempseletemp=thiss.id;
+	vtempidnamedeseries=thiss.id;
 
 
 for(var i in arrayseries2019){
 	if(arrayseries2019[i].idname==vtempidnamedeseries){vtempdeseriesutlimg=arrayseries2019[i].pg}
 }
 
-vermenuserieselitemporadas();
+fvermenuidcajas2();
 
 
 
-	//	console.log("nm  "+ arrayseries2019[i].idname);
+	
 	for(var ii in arrayseries2019[vtempseletemp]){
-	//	crealoscuadroseriesytemp(arrayseries2019[i][ii]);
+
 
 
 	if(arrayseries2019[vtempseletemp][ii].idname){
-	//	console.log("nm  "+ arrayseries2019[vtempseletemp][ii].idname);
+
 
 		crealoscuadroseriesytemp(arrayseries2019[vtempseletemp][ii].idname,arrayseries2019[vtempseletemp][ii].title,vtempdeseriesutlimg);
 	}
 
 	
-	}	
+	}	}
 
 
 
@@ -1414,208 +832,57 @@ vermenuserieselitemporadas();
 
 
 
+function pasarleeliframepeliculas(stsrc){
 
-
-}
-}
-
-
-
-function atrasserie(){
-if(arrayseries2019){
-	pauseAllVideos();
-vermenuseries();
-
-removerelementoshijos("idacaaddseries");
-
-
-	for(var i in arrayseries2019){
-
-
-crealoscuadroseries(arrayseries2019[i].idname,arrayseries2019[i].title,arrayseries2019[i].pg);
-
+    document.getElementById("idpeliculasvisor").src=stsrc;
 }
 
-
-}
-
-}
-
-
-
-function atraspelis(){
-if(arraypeliculas2019){
-	pauseAllVideos();
-	removerelementoshijos("idacaadd");
-vermenupeliculas();
-
-
-
-	for(var i in arraypeliculas2019){
-
-		
-crealoscuadorpelis(arraypeliculas2019[i].idname,arraypeliculas2019[i].title,arraypeliculas2019[i].img);
-
-}
-
-
-}
-
-}
-
-
-
-function atraslibros(){
-//	traejsonlibros();
-
-
-if(arraylibros){
-	pauseAllVideos();
-	removerelementoshijos("idacaaddlibros");
-vermenulibros();
-
-
-
-	for(var i in arraylibros){
-
-		
-		crealoslibros(arraylibros[i].idname,arraylibros[i].title,arraylibros[i].img);
-
-}
-
-
-}
-
-}
-
-
-
-
-
-
-
-var listelemremo;
 function removerelementoshijos(idele) {
 
 $("#"+idele).empty();
 
 }
 
+function escribeppeliculas(st){
 
+    document.getElementById("idppeliculas").innerHTML=st;
+}
+function escribeppeliculas2(st){
 
-function pauseAllVideos() 
-    { 
-
-	try {
-		pasarleeliframepeliculas(temorepruceestevideoserie)
-    mostrardiv("iddiviframeyamspeliculas");
-	} catch (error) {
-		
-	}		
-				
-    }
-
-ocultardiv("idbtserieselijetemp");
-
-var ximgelement ;
-var contadordeimgpublcidad=0;
-
-function getelementosclass() {
-   ximgelement = document.getElementsByClassName("imgclizq");
-//	ximgelement[0].innerHTML = "Hello World!";
+document.getElementById("idppeliculas2").innerHTML=st;
 }
 
+function escribeppeliculas3(st){
 
-function cambiodeimagenesfor(){
-
-	for(var i in a){}
+document.getElementById("idppeliculas3").innerHTML=st;
+}
+function fveriframepeliculas(){
+  mostrasrdiv("idabremenu1");
+mostrasrdiv("idponertodo");
+}
+function focultarframepeliculas(){
+ocultardiv("idponertodo");
 }
 
+function  dodnevaelvideo(){
+    vw=window.innerWidth;
+  vh=window.innerHeight;
+if(vw>500){
 
-function retornaimgpublciidad(){
-
-return ;
+    document.getElementById("idponertodo").style.height=String(vh*0.65)+"px";
+    document.getElementById("idponertodo").style.width=String(vw*0.65)+"px";
+    document.getElementById("idponertodo").style.left=String(vw*0.25)+"px";
 
 }
-var idxdearrarypublic=0;
-var  longitupublicidad=0;
-var unasolavessetintervaluno=1;
-function asignaimgpublicudad(){
-	longitupublicidad=arraypublicdad.length;
-//	console.log(" longitupublicidad  "+longitupublicidad);
-if(idxdearrarypublic>=longitupublicidad){idxdearrarypublic=0;}
+if(vw<=500){
 
-	for(var i in ximgelement){
-		if(idxdearrarypublic>=longitupublicidad){idxdearrarypublic=0;}
-//console.log(idxdearrarypublic);
+document.getElementById("idponertodo").style.height=String(vh*0.4)+"px";
+document.getElementById("idponertodo").style.width=String(vw*1)+"px";
+document.getElementById("idponertodo").style.left=String(vw*0)+"px";
 
-		ximgelement[i].src=cambimgublic(idxdearrarypublic);//arraypublicdad[idxdearrarypublic].img;
-		idxdearrarypublic=idxdearrarypublic+1;
-
-
-	}
-}
-
-
-function cambimgublic(idx){
-	if(idx>=longitupublicidad){idx=0;}
-	return arraypublicdad[idx].img;
-}
-function setintervaluno(){
-
-if(unasolavessetintervaluno==1){unasolavessetintervaluno=10;
-	setInterval(function (){
-		asignaimgpublicudad();
-	}, 3000);
 }
 
 }
-
-
-
-var arraypublicdad=[];
-function traejsonpublicidad(){
-
-$.ajax({
-					 
-					 url:   'publicidad.json',
-						dataType:  'json',
-					 type:  'get',
-					 cache:false,
-					 success:  function (data) {
-
-				
-						for(var i in data){
-				
-					 arraypublicdad.push({id:data[i].id,idname:data[i].name,img:data[i].img,pg:data[i].pg,activo:data[i].activo});
-						}
-
-					
-						getelementosclass();
-						asignaimgpublicudad();
-
-
-
-
-						setintervaluno();
-					//	console.log(arraypublicdad);
-					 }
-	 });
-
-
-
-
-
-
-}
-
-ocultardiv("idbtserieselijetemp");
-ocultardiv("idbtpelicjetemp");
-
-traejsonpublicidad();
-
-traejsonlibros();
-
 
 
 
@@ -1624,7 +891,6 @@ traejsonlibros();
 
 
 
-
+  </div> 
 </body>
-
-</html>
+</html> 
