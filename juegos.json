@@ -21,7 +21,74 @@
     "title":"Winter adventures <br> Android PC",
     "img" : "img/imgjuegos/winteradventures.jpg",
     "pg" : "//play.famobi.com/winter-adventures/A-GAMESYS"
+    },
+
+    "minecraft" : {
+      "id" : "id3",
+    "idname" : "minecraft",
+    "title":"Minecraft <br> para  PC",
+    "img" : "img/imgjuegos/minecraft.jpg",
+    "pg" : "https://classic.minecraft.net/"
+    },
+    "hexpuzzle" : {
+      "id" : "id4",
+    "idname" : "hexpuzzle",
+    "title":"hexpuzzle <br> Android PC",
+    "img" : "img/imgjuegos/hexpuzzle.jpg",
+    "pg" : "https://play.famobi.com/hex-puzzle/A-TC5AK"
+    }
+
+    ,
+    "hexpuzzle2" : {
+      "id" : "id5",
+    "idname" : "hexpuzzle2",
+    "title":"hexpuzzle 2 <br> Android PC",
+    "img" : "img/imgjuegos/hexpuzzle2.jpg",
+    "pg" : "//html5.iclouds.io/hex-puzzle/"
+    }
+    ,
+    "ball" : {
+      "id" : "id6",
+    "idname" : "ball",
+    "title":"Ball <br> Android 7 PC",
+    "img" : "img/imgjuegos/ball.jpg",
+    "pg" : "https://html5.gamedistribution.com/2733d5951e04400a8ed857818635e670/"
+    }
+    ,
+    "crazyjump" : {
+      "id" : "id7",
+    "idname" : "crazyjump",
+    "title":"Crazyjump <br> Android 7 PC",
+    "img" : "img/imgjuegos/crazyjump.jpg",
+    "pg" : "html5.iclouds.io/crazy_jump/"
+    }
+    ,
+    "impossibledashonline" : {
+      "id" : "id8",
+    "idname" : "impossibledashonline",
+    "title":"Impossible dashon line <br> Android  PC",
+    "img" : "img/imgjuegos/impossibledashonline.jpg",
+    "pg" : "http://html5.iclouds.io/impossible-dash-online/"
+    }
+    ,
+    "tankwars" : {
+      "id" : "id9",
+    "idname" : "tankwars",
+    "title":"Tank wars<br> Android  PC",
+    "img" : "img/imgjuegos/tankwars.jpg",
+    "pg" : "http://html5.iclouds.io/tank-wars/"
+    }
+    ,
+    "matcharena" : {
+      "id" : "id10",
+    "idname" : "matcharena",
+    "title":"Mtcharena<br> Android  PC",
+    "img" : "img/imgjuegos/matcharena.jpg",
+    "pg" : "https://play.matcharenagame.com"
     }
 
 
+    
+    
+    
 }
