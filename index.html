@@ -535,6 +535,7 @@ background-color: #666666;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
   <a onclick="fvermenupeliculas();" href="#">Peliculas</a>
   <a onclick="fvermenuseries();"  href="#">Series</a>
+  <a onclick="fvermenujuegos();"  href="#">Juegos</a>
   <a onclick="fvermenulibros();" href="#">Libros</a>
   <a href="#">Contact</a>
 </div>
@@ -580,6 +581,7 @@ function iniciunoves(){
     traejsonpeliculas2019();
     traejsonseries2019();
     traejsonlibros();
+    traejsonjuegos();
     dodnevaelvideo();
 }
 function denuevovariable(){
@@ -630,6 +632,36 @@ fvermenuidcajas1();
 						}
    
 }
+
+
+
+
+
+
+function fvermenujuegos(){
+    removerelementoshijos("anadeacapelis");
+    removerelementoshijos("anadeacapelis2");
+    removerelementoshijos("anadeacapelis2");
+    focultarmenunave()
+   // ocultardiv("idabremenu1");
+		ocultardiv("idabremenu1a");
+   // mostrasrdiv("idcajas1");
+fvermenuidcajas1();
+
+
+    for(var i in arrayJuegos){
+                           
+   
+      crealoscuadorjuegos(arrayJuegos[i].idname,arrayJuegos[i].title,arrayJuegos[i].img);
+
+						}
+   
+}
+
+
+
+
+
 
 
 
@@ -778,6 +810,37 @@ function traejsonlibros(){
 
 
 
+var arrayJuegos=[];
+
+function traejsonjuegos(){
+
+    $.ajax({              
+               url:   'juegos.json',
+                dataType:  'json',
+               type:  'get',
+               cache:false,
+               success:  function (data) {
+           
+           
+                for(var i in data){
+                  arrayJuegos.push({id:data[i].id,idname:data[i].idname,img:data[i].img,pg:data[i].pg,title:data[i].title})
+       
+     
+                }
+
+
+
+
+
+               }
+       });
+
+
+
+
+
+
+}
 
 
 
@@ -819,6 +882,24 @@ function traejsonpeliculas2019(){
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var arrayseries2019=[];
 
@@ -870,6 +951,12 @@ $("#anadeacapelis").append("<div onclick="+"onclilibros(this);"+" id="+String(st
 
 }
 
+function crealoscuadorjuegos(stid,sttitle,sturlimg){
+    escribeppeliculas("Juegos");
+
+$("#anadeacapelis").append("<div onclick="+"onclijuegos(this);"+" id="+String(stid)+"  class='column'><div class='card'><h3>"+String(sttitle)+"</h3><img class='imgp' src="+String(sturlimg)+" alt='Card image cap'></div></div>");
+
+}
 
 
 
@@ -903,7 +990,7 @@ function crealoscuadroseriesytempvideos(stid,sttitle,sturlimg){
 function onclipeliculas(thiss){
 focultarmenunave();
 focultarmenupeliculas();
-//alert("aca   "+thiss.id);
+
     vtempestapeliculaidname=thiss.id;
     if(vtempestapeliculaidname!=""){
        
@@ -921,7 +1008,7 @@ var vtempestalibrosidname="";
 function onclilibros(thiss){
 focultarmenunave();
 focultarmenupeliculas();
-//alert("aca   "+thiss.id);
+
 vtempestalibrosidname=thiss.id;
     if(vtempestalibrosidname!=""){
        
@@ -937,13 +1024,33 @@ vtempestalibrosidname=thiss.id;
 }
 
 
+var vtempestajuegossidname="";
+function onclijuegos(thiss){
+focultarmenunave();
+focultarmenupeliculas();
+
+vtempestajuegossidname=thiss.id;
+    if(vtempestajuegossidname!=""){
+       
+        for(var i in arrayJuegos){
+            if(arrayJuegos[i].idname==vtempestajuegossidname){
+            //   console.log(i+"    "+ vtempestapeliculaidname+"    "+ arraypeliculas2019[i].idname);
+             pasarleeliframepeliculas(arrayJuegos[i].pg);
+            }
+        }
+    }
+
+
+}
+
+
 
 
 var tempestevideocajas="";
 var tempconteovideoseries=1;
 function oncliseriestemp(thiss){
 
-    //alert("aca   "+thiss.id);
+    
 	tempconteovideoseries=1;
 	removerelementoshijos("anadeacapelis3");
 
@@ -1001,8 +1108,7 @@ var vtempseletemp="";
 var vtempdeseriesutlimg="";
 var vtempidnamedeseries="";
 function oncliseries(thiss){
-	//removerelementoshijos("idacaaddserieselijetemp");
-//alert("selecc "+thiss.id);
+
 
 	vtempseletemp=thiss.id;
 	vtempidnamedeseries=thiss.id;
@@ -1090,7 +1196,7 @@ document.getElementById("idponertodo").style.left=String(vw*0)+"px";
 
 }
 
-alert( vw+"   "+vh);
+
 
 if(vw>500){
   document.getElementById("idponertodo").style.position="absolute";

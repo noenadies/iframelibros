@@ -1,0 +1,27 @@
+{
+  "bubbleshooter" : {
+      "id" : "id0",
+    "idname" : "bubbleshooter",
+    "title":"Bubble Shooter <br> Android PC",
+    "img" : "img/imgjuegos/bubbleshooter.jpg",
+    "pg" : "https://games.softgames.com/games/bubble-shooter-saga/gamesites/2792/locale/en"
+    },
+
+    "BirdBox" : {
+      "id" : "id1",
+    "idname" : "Juego",
+    "title":"biologia",
+    "img" : "img/pelis/BirdBox.jpg",
+    "pg" : "//html5.iclouds.io/neon-hockey/"
+    },
+
+    "aladdin" : {
+      "id" : "id2",
+    "idname" : "fisisca",
+    "title":"fisisca",
+    "img" : "img/pelis/aladdin.jpg",
+    "pg" : "https://drive.google.com/file/d/1UD2jzD8RN6DFW_MO6QeB4KY7IYRQoa8F/preview?authuser=0"
+    }
+
+
+}
