@@ -1075,9 +1075,9 @@ ocultardiv("idponertodo");
 function  dodnevaelvideo(){
     vw=window.innerWidth;
   vh=window.innerHeight;
-if(vw>500){
+if(vw>5000<=6250){
 
-    document.getElementById("idponertodo").style.height=String(vh*0.65)+"px";
+    document.getElementById("idponertodo").style.height=String(vh*0.8)+"px";
     document.getElementById("idponertodo").style.width=String(vw*0.65)+"px";
     document.getElementById("idponertodo").style.left=String(vw*0.25)+"px";
 
@@ -1090,6 +1090,16 @@ document.getElementById("idponertodo").style.left=String(vw*0)+"px";
 
 }
 
+alert( vw+"   "+vh);
+
+if(vw>500){
+  document.getElementById("idponertodo").style.position="absolute";
+document.getElementById("idponertodo").style.height=String(vh*0.90)+"px";
+document.getElementById("idponertodo").style.width=String(vw*0.70)+"px";
+document.getElementById("idponertodo").style.left=String(vw*0.15)+"px";
+document.getElementById("idponertodo").style.top=String(vh*0.000051)+"px";
+
+}
 }
 
 
